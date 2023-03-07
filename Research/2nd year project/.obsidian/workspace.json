@@ -30,9 +30,31 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "841af7415baf9543",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.1.16"
+              }
+            }
+          },
+          {
+            "id": "dceb8b86c4dfa404",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DB design.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -82,7 +104,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "9749544b4c53185b",
@@ -98,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Project Proposal Draft.md",
+                "file": "DB design.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Project Proposal Draft.md",
+                "file": "DB design.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Project Proposal Draft.md"
+                "file": "DB design.md"
               }
             }
           }
@@ -159,9 +182,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "924d590863084b07",
+  "active": "dceb8b86c4dfa404",
   "lastOpenFiles": [
-    "2nd year project.md",
-    "Project Proposal Draft.md"
+    "DB design.md",
+    "Project Proposal Draft.md",
+    "2nd year project.md"
   ]
 }
