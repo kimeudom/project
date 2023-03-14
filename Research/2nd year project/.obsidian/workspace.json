@@ -52,9 +52,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c52b10369f46d35c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HCI.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -104,8 +116,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "9749544b4c53185b",
@@ -121,7 +132,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DB design.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +148,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DB design.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,9 +169,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "DB design.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -182,9 +189,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dceb8b86c4dfa404",
+  "active": "841af7415baf9543",
   "lastOpenFiles": [
     "DB design.md",
+    "HCI.md",
     "Project Proposal Draft.md",
     "2nd year project.md"
   ]
