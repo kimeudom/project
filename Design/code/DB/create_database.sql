@@ -2,27 +2,31 @@
 Assumes a database smsCB is already created and can be connected to
 
 Author: Kimeu Dominic
-v=1.0
+v=1.1
 
 */
 
 /* Creating tables*/
-
-/* Categories table */
-DROP TABLE IF EXISTS categories;
+/* Messages Table */
+DROP TABLE IF EXISTS msg;
+create table msg(
+  id int AUTO_INCREMENT primary key,
+  clientID int not null,
+  msg MEDIUMTEXT not null,
+  categories JSON
+);
 
 /* Clients Table*/
 DROP TABLE IF EXISTS clients;
 
 create table clients(
   tel VARCHAR(20)not null primary key,
-  msg MEDIUMTEXT not null,
   cellID int not null,
   baseID int not null,
   lastConnectedZone int,
   lastConnectedBase int,
   connectionStatus binary default 0,
-  category JSON
+  categories JSON
 );
 
 /*Carriers Table*/
@@ -68,3 +72,6 @@ ALTER TABLE clients ADD CONSTRAINT fk_clients_cells FOREIGN KEY (cellID) REFEREN
 
 /*Clients and Base Stations*/
 ALTER TABLE clients ADD CONSTRAINT fk_clients_bstations FOREIGN KEY (baseID) REFERENCES bstations(id);
+
+/* Client and msg*/
+ALTER TABLE msg ADD CONSTRAINT fk_msg_client FOREIGN KEY (id) REFERENCES clients(clientID);
