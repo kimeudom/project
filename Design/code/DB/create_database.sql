@@ -11,7 +11,7 @@ v=1.1
 DROP TABLE IF EXISTS msg;
 create table msg(
   id int AUTO_INCREMENT primary key,
-  clientID int not null,
+  clientID varchar(20) not null,
   msg MEDIUMTEXT not null,
   categories JSON
 );
@@ -74,4 +74,4 @@ ALTER TABLE clients ADD CONSTRAINT fk_clients_cells FOREIGN KEY (cellID) REFEREN
 ALTER TABLE clients ADD CONSTRAINT fk_clients_bstations FOREIGN KEY (baseID) REFERENCES bstations(id);
 
 /* Client and msg*/
-ALTER TABLE msg ADD CONSTRAINT fk_msg_client FOREIGN KEY (id) REFERENCES clients(clientID);
+ALTER TABLE msg ADD CONSTRAINT fk_msg_client FOREIGN KEY (clientID) REFERENCES clients(tel);
