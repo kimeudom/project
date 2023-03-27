@@ -1,0 +1,1504 @@
+.kanban-kanban {
+  width: 100%;
+  height: 785px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.kanban-frame5 {
+  top: 0px;
+  left: 0px;
+  width: 1440px;
+  height: 836px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-self: stretch;
+  align-items: flex-start;
+  border-color: transparent;
+  background-color: rgba(124, 58, 237, 1);
+}
+
+.kanban-vector {
+  top: 32px;
+  left: 35px;
+  width: 50px;
+  height: 56px;
+  position: absolute;
+}
+
+.kanban-frame24 {
+  top: 147.64236450195312px;
+  left: 35px;
+  width: 113px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  border-color: transparent;
+  flex-direction: column;
+}
+
+.kanban-link-button {
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-color: transparent;
+  border-radius: 5px;
+  margin-bottom: 36px;
+  justify-content: center;
+}
+
+.kanban-tabletportrait {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin-right: 16px;
+}
+
+.kanban-label {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 5px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.kanban-text {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 125%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0px;
+  text-decoration: none;
+}
+
+.kanban-link-button1 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-color: transparent;
+  border-radius: 5px;
+  margin-bottom: 36px;
+  justify-content: center;
+}
+
+.kanban-people {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin-right: 16px;
+}
+
+.kanban-label1 {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 5px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.kanban-text02 {
+  color: rgba(201, 178, 255, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 125%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0px;
+  text-decoration: none;
+}
+
+.kanban-link-button2 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-color: transparent;
+  border-radius: 5px;
+  margin-bottom: 36px;
+  justify-content: center;
+}
+
+.kanban-documenttext {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin-right: 16px;
+}
+
+.kanban-label2 {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 5px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.kanban-text04 {
+  color: rgba(201, 178, 255, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 125%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0px;
+  text-decoration: none;
+}
+
+.kanban-link-button3 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-color: transparent;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.kanban-cog {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin-right: 16px;
+}
+
+.kanban-label3 {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 5px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.kanban-text06 {
+  color: rgba(201, 178, 255, 1);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 125%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0px;
+  text-decoration: none;
+}
+
+.kanban-frame9 {
+  top: 4px;
+  left: 175px;
+  width: 1265px;
+  display: flex;
+  padding: 48px 32px;
+  overflow: hidden;
+  position: absolute;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  border-radius: 32px 0 0;
+  flex-direction: column;
+  background-color: rgba(251, 249, 255, 1);
+}
+
+.kanban-frame20 {
+  display: flex;
+  padding: 0 24px;
+  position: relative;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-bottom: 32px;
+}
+
+.kanban-frame17 {
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  border-color: transparent;
+  margin-right: 48px;
+}
+
+.kanban-text08 {
+  color: rgba(63, 57, 55, 1);
+  height: auto;
+  font-size: 32px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 12px;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-vector1 {
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.kanban-profilepicture1 {
+  width: 64px;
+  height: 64px;
+  position: relative;
+  border-color: transparent;
+  border-radius: 9999px;
+}
+
+.kanban-frame21 {
+  display: flex;
+  padding: 0 24px;
+  position: relative;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-bottom: 32px;
+}
+
+.kanban-button {
+  display: flex;
+  padding: 12px 32px;
+  position: relative;
+  align-items: center;
+  border-color: transparent;
+  margin-right: 16px;
+  border-radius: 5px;
+  justify-content: center;
+  background-color: rgba(124, 58, 237, 1);
+}
+
+.kanban-filter {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  margin-right: 8px;
+}
+
+.kanban-text10 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: auto;
+  box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.10000000149011612);
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-autocomplete-field {
+  width: 1000px;
+  height: 48px;
+  display: flex;
+  padding: 24px;
+  position: relative;
+  box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.10000000149011612);
+  align-items: center;
+  flex-shrink: 0;
+  border-color: rgba(227, 227, 227, 1);
+  border-style: solid;
+  border-width: 0.699999988079071px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.kanban-search {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  margin-right: 10px;
+}
+
+.kanban-text12 {
+  color: rgba(124, 124, 138, 1);
+  height: auto;
+  flex-grow: 1;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 100%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-frame8 {
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+
+.kanban-frame51 {
+  width: 368.3333435058594px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 48px;
+  border-radius: 8px;
+  flex-direction: column;
+}
+
+.kanban-frame15 {
+  display: flex;
+  padding: 24px;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-bottom: 0px;
+}
+
+.kanban-text14 {
+  color: rgba(63, 57, 55, 1);
+  height: auto;
+  font-size: 20px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-frame16 {
+  display: flex;
+  padding: 0 24px;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+  border-color: transparent;
+  flex-direction: column;
+}
+
+.kanban-frame10 {
+  display: flex;
+  padding: 24px;
+  overflow: hidden;
+  position: relative;
+  align-self: stretch;
+  box-shadow: 0px 4px 16px 0px rgba(234, 226, 253, 1);
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.kanban-text16 {
+  color: rgba(63, 57, 55, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.kanban-text18 {
+  color: rgba(117, 105, 101, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.kanban-frame23 {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+}
+
+.kanban-frame2101 {
+  display: flex;
+  padding: 4px 8px;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  margin-right: 8px;
+  border-radius: 8px;
+  background-color: rgba(226, 214, 255, 1);
+}
+
+.kanban-text20 {
+  color: rgba(124, 58, 237, 1);
+  height: auto;
+  font-size: 11px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-frame22 {
+  display: flex;
+  padding: 4px 8px;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 8px;
+  background-color: rgba(226, 214, 255, 1);
+}
+
+.kanban-text22 {
+  color: rgba(124, 58, 237, 1);
+  height: auto;
+  font-size: 11px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-frame201 {
+  display: flex;
+  padding: 24px;
+  overflow: hidden;
+  position: relative;
+  align-self: stretch;
+  box-shadow: 0px 4px 16px 0px rgba(234, 226, 253, 1);
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.kanban-text24 {
+  color: rgba(63, 57, 55, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.kanban-text26 {
+  color: rgba(117, 105, 101, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.kanban-frame231 {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+}
+
+.kanban-frame232 {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+}
+
+.kanban-frame2102 {
+  display: flex;
+  padding: 4px 8px;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 8px;
+  background-color: rgba(226, 214, 255, 1);
+}
+
+.kanban-text28 {
+  color: rgba(124, 58, 237, 1);
+  height: auto;
+  font-size: 11px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-frame2103 {
+  display: flex;
+  padding: 24px;
+  overflow: hidden;
+  position: relative;
+  align-self: stretch;
+  box-shadow: 0px 4px 16px 0px rgba(234, 226, 253, 1);
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.kanban-text30 {
+  color: rgba(63, 57, 55, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.kanban-text32 {
+  color: rgba(117, 105, 101, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.kanban-frame241 {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+}
+
+.kanban-frame2104 {
+  display: flex;
+  padding: 4px 8px;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 8px;
+  background-color: rgba(226, 214, 255, 1);
+}
+
+.kanban-text34 {
+  color: rgba(124, 58, 237, 1);
+  height: auto;
+  font-size: 11px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-frame221 {
+  display: flex;
+  padding: 24px;
+  overflow: hidden;
+  position: relative;
+  align-self: stretch;
+  box-shadow: 0px 4px 16px 0px rgba(234, 226, 253, 1);
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 8px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.kanban-text36 {
+  color: rgba(63, 57, 55, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.kanban-text38 {
+  color: rgba(63, 57, 55, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.kanban-frame233 {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+}
+
+.kanban-frame2105 {
+  display: flex;
+  padding: 4px 8px;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 8px;
+  background-color: rgba(199, 199, 205, 1);
+}
+
+.kanban-text40 {
+  color: rgba(63, 57, 55, 1);
+  height: auto;
+  font-size: 11px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-frame12 {
+  width: 368.3333435058594px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 48px;
+  border-radius: 8px;
+  flex-direction: column;
+}
+
+.kanban-frame151 {
+  display: flex;
+  padding: 24px;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-bottom: 0px;
+}
+
+.kanban-text42 {
+  color: rgba(63, 57, 55, 1);
+  height: auto;
+  font-size: 20px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-frame161 {
+  display: flex;
+  padding: 0 24px;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+  border-color: transparent;
+  flex-direction: column;
+}
+
+.kanban-frame202 {
+  display: flex;
+  padding: 24px;
+  overflow: hidden;
+  position: relative;
+  align-self: stretch;
+  box-shadow: 0px 4px 16px 0px rgba(234, 226, 253, 1);
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.kanban-text44 {
+  color: rgba(63, 57, 55, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.kanban-text46 {
+  color: rgba(117, 105, 101, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.kanban-frame242 {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+}
+
+.kanban-frame2106 {
+  display: flex;
+  padding: 4px 8px;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  margin-right: 8px;
+  border-radius: 8px;
+  background-color: rgba(226, 214, 255, 1);
+}
+
+.kanban-text48 {
+  color: rgba(124, 58, 237, 1);
+  height: auto;
+  font-size: 11px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-frame222 {
+  display: flex;
+  padding: 4px 8px;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 8px;
+  background-color: rgba(226, 214, 255, 1);
+}
+
+.kanban-text50 {
+  color: rgba(124, 58, 237, 1);
+  height: auto;
+  font-size: 11px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-frame2107 {
+  display: flex;
+  padding: 24px;
+  overflow: hidden;
+  position: relative;
+  align-self: stretch;
+  box-shadow: 0px 4px 16px 0px rgba(234, 226, 253, 1);
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 8px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.kanban-logoinstagram {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.kanban-text52 {
+  color: rgba(63, 57, 55, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.kanban-text54 {
+  color: rgba(117, 105, 101, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.kanban-frame243 {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+}
+
+.kanban-frame2108 {
+  display: flex;
+  padding: 4px 8px;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 8px;
+  background-color: rgba(226, 214, 255, 1);
+}
+
+.kanban-text56 {
+  color: rgba(124, 58, 237, 1);
+  height: auto;
+  font-size: 11px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-frame13 {
+  width: 368.3333435058594px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  border-radius: 8px;
+  flex-direction: column;
+}
+
+.kanban-frame152 {
+  display: flex;
+  padding: 24px;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-bottom: 0px;
+}
+
+.kanban-text58 {
+  color: rgba(63, 57, 55, 1);
+  height: auto;
+  font-size: 20px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-frame162 {
+  display: flex;
+  padding: 0 24px;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+  border-color: transparent;
+  flex-direction: column;
+}
+
+.kanban-frame223 {
+  display: flex;
+  padding: 24px;
+  overflow: hidden;
+  position: relative;
+  align-self: stretch;
+  box-shadow: 0px 4px 16px 0px rgba(234, 226, 253, 1);
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.kanban-text60 {
+  color: rgba(63, 57, 55, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.kanban-text62 {
+  color: rgba(117, 105, 101, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.kanban-frame244 {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+}
+
+.kanban-frame2109 {
+  display: flex;
+  padding: 4px 8px;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  margin-right: 8px;
+  border-radius: 8px;
+  background-color: rgba(226, 214, 255, 1);
+}
+
+.kanban-text64 {
+  color: rgba(124, 58, 237, 1);
+  height: auto;
+  font-size: 11px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-frame224 {
+  display: flex;
+  padding: 4px 8px;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 8px;
+  background-color: rgba(226, 214, 255, 1);
+}
+
+.kanban-text66 {
+  color: rgba(124, 58, 237, 1);
+  height: auto;
+  font-size: 11px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-frame2110 {
+  display: flex;
+  padding: 24px;
+  overflow: hidden;
+  position: relative;
+  align-self: stretch;
+  box-shadow: 0px 4px 16px 0px rgba(234, 226, 253, 1);
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.kanban-text68 {
+  color: rgba(63, 57, 55, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.kanban-text70 {
+  color: rgba(117, 105, 101, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.kanban-frame245 {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+}
+
+.kanban-frame2111 {
+  display: flex;
+  padding: 4px 8px;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  margin-right: 8px;
+  border-radius: 8px;
+  background-color: rgba(226, 214, 255, 1);
+}
+
+.kanban-text72 {
+  color: rgba(124, 58, 237, 1);
+  height: auto;
+  font-size: 11px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-frame225 {
+  display: flex;
+  padding: 4px 8px;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 8px;
+  background-color: rgba(226, 214, 255, 1);
+}
+
+.kanban-text74 {
+  color: rgba(124, 58, 237, 1);
+  height: auto;
+  font-size: 11px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-frame101 {
+  display: flex;
+  padding: 24px;
+  overflow: hidden;
+  position: relative;
+  align-self: stretch;
+  box-shadow: 0px 4px 16px 0px rgba(234, 226, 253, 1);
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.kanban-text76 {
+  color: rgba(63, 57, 55, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.kanban-text78 {
+  color: rgba(117, 105, 101, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.kanban-frame246 {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+}
+
+.kanban-frame2112 {
+  display: flex;
+  padding: 4px 8px;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  margin-right: 8px;
+  border-radius: 8px;
+  background-color: rgba(226, 214, 255, 1);
+}
+
+.kanban-text80 {
+  color: rgba(124, 58, 237, 1);
+  height: auto;
+  font-size: 11px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-frame226 {
+  display: flex;
+  padding: 4px 8px;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 8px;
+  background-color: rgba(226, 214, 255, 1);
+}
+
+.kanban-text82 {
+  color: rgba(124, 58, 237, 1);
+  height: auto;
+  font-size: 11px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-frame203 {
+  display: flex;
+  padding: 24px;
+  overflow: hidden;
+  position: relative;
+  align-self: stretch;
+  box-shadow: 0px 4px 16px 0px rgba(234, 226, 253, 1);
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 8px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.kanban-text84 {
+  color: rgba(63, 57, 55, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.kanban-text86 {
+  color: rgba(63, 57, 55, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: stretch;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.kanban-frame234 {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+}
+
+.kanban-frame2113 {
+  display: flex;
+  padding: 4px 8px;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  margin-right: 8px;
+  border-radius: 8px;
+  background-color: rgba(199, 199, 205, 1);
+}
+
+.kanban-text88 {
+  color: rgba(63, 57, 55, 1);
+  height: auto;
+  font-size: 11px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.kanban-frame227 {
+  display: flex;
+  padding: 4px 8px;
+  position: relative;
+  align-items: flex-start;
+  border-color: transparent;
+  border-radius: 8px;
+  background-color: rgba(199, 199, 205, 1);
+}
+
+.kanban-text90 {
+  color: rgba(63, 57, 55, 1);
+  height: auto;
+  font-size: 11px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}

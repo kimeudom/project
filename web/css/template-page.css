@@ -1,0 +1,339 @@
+.template-page-template-page {
+  width: 100%;
+  height: 1024px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  background-color: rgba(202, 240, 248, 1);
+}
+
+.template-page-user {
+  top: 13px;
+  right: 16px;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  border-color: transparent;
+}
+
+.template-page-content {
+  top: 101px;
+  left: 229px;
+  width: 1211px;
+  height: 923px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  border-radius: 30px 30px 0 0;
+  background-color: rgba(79, 93, 117, 1);
+}
+
+.template-page-row {
+  top: 174px;
+  left: 78px;
+  width: 1069px;
+  height: 58px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+
+.template-page-text {
+  left: 11px;
+  color: rgba(33, 37, 41, 1);
+  width: 339px;
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  align-self: auto;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-style: Bold;
+  text-align: left;
+  font-family: Lato;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.template-page-input {
+  top: 0px;
+  left: 399px;
+  width: 400px;
+  height: 58px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 30px;
+}
+
+.template-page-row1 {
+  top: 268px;
+  left: 78px;
+  width: 1069px;
+  height: 58px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+
+.template-page-text02 {
+  left: 11px;
+  color: rgba(33, 37, 41, 1);
+  width: 339px;
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  align-self: auto;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-style: Bold;
+  text-align: left;
+  font-family: Lato;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.template-page-input1 {
+  top: 0px;
+  left: 399px;
+  width: 400px;
+  height: 58px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 30px;
+}
+
+.template-page-row2 {
+  top: 358px;
+  left: 78px;
+  width: 1069px;
+  height: 58px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+
+.template-page-text04 {
+  left: 11px;
+  color: rgba(33, 37, 41, 1);
+  width: 339px;
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  align-self: auto;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-style: Bold;
+  text-align: left;
+  font-family: Lato;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.template-page-input2 {
+  top: 0px;
+  left: 399px;
+  width: 400px;
+  height: 58px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 30px;
+}
+
+.template-page-row3 {
+  top: 448px;
+  left: 78px;
+  width: 1069px;
+  height: 58px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+
+.template-page-text06 {
+  left: 11px;
+  color: rgba(33, 37, 41, 1);
+  width: 339px;
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  align-self: auto;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-style: Bold;
+  text-align: left;
+  font-family: Lato;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.template-page-input3 {
+  top: 0px;
+  left: 399px;
+  width: 400px;
+  height: 58px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 30px;
+}
+
+.template-page-submit {
+  top: 613px;
+  left: 867px;
+  width: 163px;
+  height: 64px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 50px;
+}
+
+.template-page-cancel {
+  top: 613px;
+  left: 314px;
+  width: 163px;
+  height: 64px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 50px;
+}
+
+.template-page-text08 {
+  left: 314px;
+  color: rgba(33, 37, 41, 1);
+  width: 635px;
+  height: auto;
+  position: absolute;
+  font-size: 40px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: center;
+  font-family: Lato;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.template-page-side-nav {
+  top: 101px;
+  left: 17px;
+  width: 189px;
+  height: 923px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+
+.template-page-option {
+  top: 70px;
+  left: 8px;
+  width: 163px;
+  height: 64px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 50px;
+}
+
+.template-page-option1 {
+  top: 165px;
+  left: 8px;
+  width: 163px;
+  height: 64px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 50px;
+}
+
+.template-page-option2 {
+  top: 260px;
+  left: 8px;
+  width: 163px;
+  height: 64px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 50px;
+}
+
+.template-page-option3 {
+  top: 355px;
+  left: 8px;
+  width: 163px;
+  height: 64px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 50px;
+}
+
+.template-page-option4 {
+  top: 450px;
+  left: 8px;
+  width: 163px;
+  height: 64px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 50px;
+}
+
+.template-page-option5 {
+  top: 545px;
+  left: 8px;
+  width: 163px;
+  height: 64px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 50px;
+}
+
+.template-page-option6 {
+  top: 640px;
+  left: 8px;
+  width: 163px;
+  height: 64px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 50px;
+}
+
+.template-page-option7 {
+  top: 735px;
+  left: 8px;
+  width: 163px;
+  height: 64px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 50px;
+}
