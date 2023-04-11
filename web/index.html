@@ -4,7 +4,8 @@
 <head>
   <title>Home Page</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="/css/index.css">
+  <link rel="stylesheet" type="text/css" href="./css/index.css">
+  <script src="/scripts/index.js"></script>
 </head>
 
 <body>
@@ -16,11 +17,13 @@
   <div id="nav-pane" class="list-horizontal">
     <nav>
       <a class="tag" href="/pages/carriers.html"><button class="btn">Carriers</button></a>
-      <a class="tag" href="/pages/broadcast.html"><button class="btn">Broadcast</button></a>
-      <a class="tag" href="/pages/records.html"><button class="btn">Records</button></a>
-      <a class="tag" href="/pages/zones.html"><button class="btn">Zones</button></a>
-      <a class="tag" href="/pages/zones.html"><button class="btn">Filters</button></a>
+      <a class="tag" href="/pages/broadcast.html"><button class="btn">Base Stations</button></a>
+      <a class="tag" href="/pages/records.html"><button class="btn">Cells</button></a>
+      <a class="tag" href="/pages/zones.html"><button class="btn">Clients</button></a>
+      <a class="tag" href="/pages/zones.html"><button class="btn">Alter Filters</button></a>
+      <a class="tag" href="/pages/filters.html"><button class="btn">Alter Zones</button></a>
       <a class="tag" href=""><button class="btn">Logout</button></a>
+      <span class="dot"></span>
     </nav>
   </div>
 
@@ -31,11 +34,11 @@
     <div id="site-nav">
       <p>Actions</p>
       <div id="nav-items" class="list-vertical">
-        <a class="tag" href="" target="_blank"><button class="btn">Create Broadcast</button></a>
-        <a class="tag" href="" target="_blank"><button class="btn">Add Base Station</button></a>
-        <a class="tag" href="" target="_blank"><button class="btn">Add Cell </button></a>
-        <a class="tag" href="" target="_blank"><button class="btn">Add Client</button></a>
-        <a class="tag" href="" target="_blank"><button class="btn">what</button></a>
+        <a class="tag" href="#"><button class="btn" onclick="loadHtml('', '')">Create Broadcast</button></a>
+        <a class="tag" href="#"><button class="btn">Add Base Station</button></a>
+        <a class="tag" href="#"><button class="btn">Records</button></a>
+        <a class="tag" href="#"><button class="btn">Add Filters</button></a>
+        <a class="tag" href="#"><button class="btn">Add Zones</button></a>
       </div>
     </div>
     <!-- Main content-->

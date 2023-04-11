@@ -1,5 +1,5 @@
 body {
-  background-color: #CBB69F;
+  background-color: #CAF0F8;
 }
 
 hr {
@@ -9,27 +9,8 @@ hr {
   margin-bottom: 15px;
 }
 
-table {
-  border: 1px solid #17120E;
-}
-
-th {
-  border: 1px solid #17120E;
-}
-
-td {
-  border: 1px solid #17120E;
-}
-
-label {
-  width: 120px;
-  margin-right: 50px;
-}
-
 #hero {
-  background-image: url("../images/coins.webp");
-  background-size: cover;
-  height: 150px;
+  height: 50px;
   margin-bottom: 5px;
 }
 
@@ -44,36 +25,22 @@ label {
 }
 
 #site-nav {
-  background-color: #17120E;
-  color: #CBB69F;
+  background-color: #4F5D75;
+  color: #1e1c1a;
   width: 20%;
-  height: 260px;
+  height: 450px;
   padding: 30 10 30 10;
   margin-right: 5px;
   text-align: center;
-  border: 2px dotted black;
+  border-radius: 25px;
 }
 
 #main-content {
   width: 80%;
   padding: 50px;
   margin-left: 5px;
-  color: #222222;
-}
-
-#contact-info {
-  color: #CBB69F;
-  text-align: center;
-}
-
-#footer {
-  background-color: #17120E;
-  margin-top: auto;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-  width: 100%;
-  position: fixed;
+  background-color: #4F5D75;
+  border-radius: 25px 0px 0px 25px;
 }
 
 .list-vertical {
@@ -84,30 +51,27 @@ label {
   display: inline;
 }
 
+.dot {
+  height: 35px;
+  width: 35px;
+  background-color: #17120E;
+  border-radius: 50px;
+  display: inline-block;
+  align-items: end;
+}
+
 .btn {
+  margin-top: 5px;
+  margin-bottom: 5px;
   height: 30px;
   width: 150px;
   padding: 10 25 10 25;
   margin: 5 5 5 5;
+  border-radius: 15px;
   border: 0px transparent;
   font-family: monospace;
   color: #CBB69F;
-  background-color: #4a2f20;
-}
-
-.tag {
-  color: #CBB69F;
-}
-
-#reg {
-  width: 70%;
-  padding-top: 90px;
-  padding-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #17120E;
-  color: #CBB69F;
+  background-color: #212227;
 }
 
 .input {
