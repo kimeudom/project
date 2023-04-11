@@ -5,7 +5,7 @@
   <title>Home Page</title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="./css/index.css">
-  <script src="/scripts/index.js"></script>
+  <script src="./scripts/index.js"></script>
 </head>
 
 <body>
@@ -34,11 +34,16 @@
     <div id="site-nav">
       <p>Actions</p>
       <div id="nav-items" class="list-vertical">
-        <a class="tag" href="#"><button class="btn" onclick="loadHtml('', '')">Create Broadcast</button></a>
-        <a class="tag" href="#"><button class="btn">Add Base Station</button></a>
-        <a class="tag" href="#"><button class="btn">Records</button></a>
-        <a class="tag" href="#"><button class="btn">Add Filters</button></a>
-        <a class="tag" href="#"><button class="btn">Add Zones</button></a>
+        <a class="tag" href="#"><button class="btn" onclick="loadHtml('main-content', 'broadcast.html')">Create
+            Broadcast</button></a>
+        <a class="tag" href="#"><button class="btn" onclick="loadHtml('main-content', 'base_stations.html')">Add Base
+            Station</button></a>
+        <a class="tag" href="#"><button class="btn"
+            onclick="loadHtml('main-content', 'records.html')">Records</button></a>
+        <a class="tag" href="#"><button class="btn" onclick="loadHtml('main-content', 'filters.html')">Add
+            Filters</button></a>
+        <a class="tag" href="#"><button class="btn" onclick="loadHtml('main-content', 'zones.html')">Add
+            Zones</button></a>
       </div>
     </div>
     <!-- Main content-->
