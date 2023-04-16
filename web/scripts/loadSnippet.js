@@ -20,3 +20,5 @@ function loadHtml(id, filename) {
     return;
   }
 }
+
+export default loadHtml;
