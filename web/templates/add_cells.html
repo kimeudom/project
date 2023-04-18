@@ -1,29 +1,38 @@
 <div id="data_input" style="justify-content: center;">
-  <h4>Enter Base Station Information Below</h4>
-  <form method="post">
-    <div class="input">
-      <label for="cellID">Cell ID: </label>
-      <input type="number" id="cellID" name="cellID">
-    </div>
-    <div class="input">
-      <label for="bstationID">Base Station ID: </label>
-      <input type="number" id="bstationID" name="bstationID">
-    </div>
-    <div class="input">
-      <label for="longitude">Longitude: </label>
-      <input type="number" id="longitude" name="longitude">
-    </div>
-    <div class="input">
-      <label for="latitude">Latitude: </label>
-      <input type="latitude" id="latitude" name="latitude">
-    </div>
-    <div class="input">
-      <label for="maxConn">Maximum connections: </label>
-      <input type="number" id="maxConn" name="maxConn">
-    </div>
+  <div id="single_entry">
+    <h4>Enter Base Station Information Below</h4>
+    <form method="post">
+      <div class="input">
+        <label for="cellID">Cell ID: </label>
+        <input type="number" id="cellID" name="cellID">
+      </div>
+      <div class="input">
+        <label for="bstationID">Base Station ID: </label>
+        <input type="number" id="bstationID" name="bstationID">
+      </div>
+      <div class="input">
+        <label for="longitude">Longitude: </label>
+        <input type="number" id="longitude" name="longitude">
+      </div>
+      <div class="input">
+        <label for="latitude">Latitude: </label>
+        <input type="latitude" id="latitude" name="latitude">
+      </div>
+      <div class="input">
+        <label for="maxConn">Maximum connections: </label>
+        <input type="number" id="maxConn" name="maxConn">
+      </div>
 
-    <input type="submit" class="btn" value="Submit">
-    <input type="reset" class="btn" value="Clear">
+      <input type="submit" class="btn" value="Submit">
+      <input type="reset" class="btn" value="Clear">
 
-  </form>
+    </form>
+  </div>
+
+  <div id="csv_entry">
+    <label for="csv">Enter the csv file</label>
+    <input type="file" id="csv" name="csv">
+    <input type="submit" class="btn">
+  </div>
+
 </div>

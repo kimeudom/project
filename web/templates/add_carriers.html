@@ -1,17 +1,28 @@
 <div id="data_input" style="justify-content: center;">
-  <h4>Enter Carrier Network Information Below</h4>
-  <form method="post">
-    <div class="input">
-      <label for="carrierID">Carrier ID: </label>
-      <input type="number" id="carrierID" name="carrierID">
-    </div>
-    <div class="input">
-      <label for="name">Name: </label>
-      <input type="text" id="name" name="name">
-    </div>
+  <div id="single_entry">
+    <h4>Enter Carrier Network Information Below</h4>
+    <form method="post">
+      <div class="input">
+        <label for="carrierID">Carrier ID: </label>
+        <input type="number" id="carrierID" name="carrierID">
+      </div>
+      <div class="input">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name">
+      </div>
 
-    <input type="submit" class="btn" value="Submit">
-    <input type="reset" class="btn" value="clear">
+      <input type="submit" class="btn" value="Submit">
+      <input type="reset" class="btn" value="clear">
 
-  </form>
+    </form>
+  </div>
+
+  <div id="csv_entry">
+    <form>
+      <label for="csv">Enter the csv file</label>
+      <input type="file" id="csv" name="csv">
+      <input type="submit" class="btn">
+    </form>
+  </div>
+
 </div>

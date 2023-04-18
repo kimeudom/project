@@ -1,0 +1,39 @@
+<div id="data_input">
+  <div id="single_entry">
+    <form method="post">
+
+      <div class="input">
+        <label for="zoneID">Zone Id</label>
+        <input type="number" id="zoneId" name="zoneId">
+      </div>
+
+      <div class="input">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+      </div>
+
+      <div class="input">
+        <label for="latitude">Latitude (N+) (S-)</label>
+        <input type="number" id="latitude" name="latitude">
+      </div>
+
+      <div class="input">
+        <label for="longitude">Longitude (E+) (W-)</label>
+        <input type="number" id="longitude" name="longitude">
+      </div>
+    </form>
+    <input type="submit" class="btn" value="Submit">
+    <input type="reset" class="btn" value="Cancel">
+
+  </div>
+
+  <div id="csv_entry">
+    <form method="post">
+      <label for="csv">Enter CSV</label>
+      <input type="file" value="Enter csv" id="csv" name="csv">
+
+      <input type="submit" value="Submit">
+
+    </form>
+  </div>
+</div>
