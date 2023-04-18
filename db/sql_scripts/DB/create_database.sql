@@ -2,7 +2,7 @@
 Assumes a database smsCB is already created and can be connected to
 
 Author: Kimeu Dominic
-v=1.1
+v=1.2
 
 */
 
@@ -57,6 +57,28 @@ create table cells(
   latitude float(15,2) not null,
   maxConnected int not null
 );
+
+/*Zones Table*/
+DROP TABLE IF EXISTS zones;
+
+CREATE TABLE zones(
+  zoneID INT PRIMARY KEY AUTO_INCREMENT,
+  zoneName VARCHAR(255),
+  longitude float(15,2) not null,
+  latitude float(15,2) not null
+);
+
+/*Filter Tables*/
+
+DROP TABLE IF EXISTS filters;
+
+CREATE TABLE filters(
+  filterID INT PRIMARY KEY AUTO_INCREMENT ,
+  filterName VARCHAR(255),
+  clientCategory INT
+);
+
+
 
 
 /*Relationships*/
