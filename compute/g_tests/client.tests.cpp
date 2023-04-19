@@ -109,11 +109,31 @@ TEST(ZoneRange, InRange){
 }
 
 TEST(ZoneRange, onBorder){
+  Point z;
+  // Creating an edge case
+  z.longitude = 265.1934;
+  z.latitude = 283.8999;
+  client *c = new client("123456789", z, 123, 456, "General Public");
+  z.longitude= 659.5400;
+  z.latitude= 368.2498;
+  double radius = 403.267;
+
+  EXPECT_EQ(c->isInRange(z, radius), true);
 
 }
 
 TEST(ZoneRange, outOfRange){
 
+  Point z;
+  // Creating an edge case
+  z.longitude = 1;
+  z.latitude = 1;
+  client *c = new client("123456789", z, 123, 456, "General Public");
+  z.longitude= -9999999;
+  z.latitude= -9999999;
+  double radius = 1;
+
+  EXPECT_EQ(c->isInRange(z, radius), false);
 }
 
 int main(int argc, char ** argv){
