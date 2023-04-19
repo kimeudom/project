@@ -7,8 +7,8 @@ Defines all client method operations that might be needed to classify, move, fin
 
 
 struct Point{
-  float longitude;
-  float latitude;
+  double longitude;
+  double latitude;
 };
 
 class client{
@@ -16,39 +16,54 @@ class client{
     // Defining all data memebers required by a class object of member;
     Point point;
     std::string tel;
-    int cellID;
+    int cell;
     int base;
-    int zone;
-    int lastConnectedZone;
+    int lastConnectedCell;
     int lastConnectedBase;
     bool connectionStatus;
     std::string category;
   
   public:
-    client(std::string tel, Point point, int base, int zone, std::string cat);
+    client(std::string tel, Point point, int base, int cell, std::string cat);
     // Returns true if the client is in range of the supplied coordinates
     // Else returns false
-    bool isInRange(Point centre, float radius);
+    bool isInRange(Point centre, double radius);
     // Returns true if the client's state is active or dormant/passive
     // Else if otherwise
     bool isActive();
     // Moves the client to a new base and zone as supplied by the data
-    void changeover(int newBase, int newZone);
+    void handOver(int newBase, int newCell);
     // Returns true if the message sent to a user has been repeated
     bool repeatMsg(Point centre, float radius, msg message);
-    // Returns true if the message was sent successfully
-    // Else otherwise
-    bool sendMsg();
+
+    // Get methods
+    std::string getTel() { return tel; };
+    double getLat() { return point.latitude; };
+    double getLon() { return point.longitude; };
+    int getCell() { return cell; };
+    int getBase() { return base; };
+    int getLCell() { return lastConnectedCell; };
+    int getLBase() { return lastConnectedBase; };
+    bool getConnStatus() { return connectionStatus; };
+    std::string getCat() { return category; };
+
+    // Set methods
+    void setLat(double lat) { point.latitude = lat; };
+    void setLon(double lon) { point.longitude = lon; };
+    void setConnStatus(bool val) { connectionStatus = val; };
+    void setCat(std::string s) { category = s; };
 };
 
-client::client(std::string telephone, Point coords, int bse, int zne, std::string cat){
+client::client(std::string telephone, Point coords, int bse, int cll, std::string cat){
     connectionStatus = 1;
     tel = telephone;
     point.longitude = coords.longitude;
     point.latitude = coords.latitude;
     base = bse;
-    zne = zone;
+    cell = cll;
     category = cat;
+    lastConnectedBase = 0;
+    lastConnectedCell = 0;
 };
 
 bool client::isActive(){
@@ -58,19 +73,15 @@ bool client::isActive(){
   return true;
 }
 
-void client::changeover(int newBase, int newZone){
+void client::handOver(int newBase, int newCell){
   lastConnectedBase = base;
-  lastConnectedZone = zone;
+  lastConnectedCell = cell;
   base = newBase;
-  zone = newZone;
+  cell = newCell;
 }
 
-bool client::isInRange( Point centre, float radius){
+bool client::isInRange( Point centre, double radius){
   // Getting the euchladian distance between the centre of the zone and the client position
   double euchDistance = sqrt(pow(point.latitude - centre.latitude, 2) + pow(point.longitude - centre.longitude, 2));
   return (euchDistance <= radius);
-}
-
-void client::sendMsg(){
-
 }
