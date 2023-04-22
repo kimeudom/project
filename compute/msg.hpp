@@ -4,6 +4,8 @@
 #include<iomanip>
 #include<ctime>
 
+namespace message{
+
 std::string getTime(){
   time_t rawtime;
   struct tm * timeinfo;
@@ -48,4 +50,6 @@ msg::msg(std::string msg, std::string cat){
     msgID = genID();
     categories = cat;
     time = getTime();
+}
+
 }
