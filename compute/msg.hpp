@@ -17,23 +17,35 @@ std::string getTime(){
   return str;
 }
 
+// Generate a unique 10 digit number as the message ID
+long long genID(){
+  struct timespec ts;
+  clock_gettime(CLOCK_MONOTONIC, &ts);
+
+  // Seeding every nano-second
+  srand((time_t)ts.tv_nsec);
+
+  return rand() % 900000000LL + 1000000000LL;
+}
+
 class msg{
   public:
     std::string message;
-    int msgID;
+    long long msgID;
     std::string time;
     std::string categories;
 
   public:
-    msg(int id, std::string msg, std::string cat);
+    msg(std::string msg, std::string cat);
     std::string getMsg() { return message; };
     std::string getTime() { return time; };
-    int getID() { return msgID; };
+    std::string getCat() { return categories; };
+    long long getID() { return msgID; };
 };
 
-msg::msg(int id, std::string msg, std::string cat){
+msg::msg(std::string msg, std::string cat){
     message = msg;
-    msgID = id;
+    msgID = genID();
     categories = cat;
     time = getTime();
 }

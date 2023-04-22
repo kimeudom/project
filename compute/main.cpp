@@ -3,15 +3,11 @@
 #include"client.hpp"
 
 int main(int argc, char ** argv){
-  Point coords;
-  coords.longitude = 0;
-  coords.latitude = 0;
+  msg *m = new msg("This is the message", "General Public");
+  std::cout << "ID :" << m->getID() << std::endl;
+  std::cout << "msg :" << m->getMsg() << std::endl;
+  std::cout << "time :" << m->getTime() << std::endl;
+  std::cout << "cat :" << m->getCat() << std::endl;
 
-  client *c = new client("123456789", coords, 123, 456, "General Public");
-  c->setLat(654835.654);
-  c->setLon(-485848.54498);
-
-  std::cout << "Latitude :" << c->getLat() << std::endl
-       << "Longitude : " << c->getLon() << std::endl;
   return 0;
 }
