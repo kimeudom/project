@@ -21,3 +21,18 @@ function loadHtml(id, filename) {
   }
 }
 
+// Pulses the color of a button on click
+function pulseColor(id) {
+  const btn = getElementById(id);
+  btn.style.backgroundColor = 'aqua';
+  setTimeout(() => {
+    btn.style.backgroundColor = '#212227';
+  }, 250);
+}
+
+setInterval(pulseColor, 500);
+
+setTimeout(() => {
+  clearInterval(Interval);
+  btn.style.backgroundColor = '#212227';
+}, 5000)
