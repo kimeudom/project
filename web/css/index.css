@@ -46,6 +46,14 @@ hr {
   border-radius: 25px 0px 0px 25px;
 }
 
+#csv-entry {
+  margin-top: 50px;
+}
+
+#csv-field {
+  width: 50px;
+}
+
 .list-vertical {
   display: block;
 }
