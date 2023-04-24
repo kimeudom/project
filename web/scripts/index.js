@@ -22,7 +22,7 @@ function loadHtml(id, filename) {
 }
 
 // Pulses the color of a button on click
-function pulseColor(id) {
+function pulse(id) {
   const btn = document.getElementById(id);
   btn.style.backgroundColor = 'aqua';
   setTimeout(() => {

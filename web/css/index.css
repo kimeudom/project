@@ -38,6 +38,7 @@ hr {
 #main-content {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 80%;
   padding: 50px;
   margin-left: 5px;
