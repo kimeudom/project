@@ -23,16 +23,16 @@ function loadHtml(id, filename) {
 
 // Pulses the color of a button on click
 function pulseColor(id) {
-  const btn = getElementById(id);
+  const btn = document.getElementById(id);
   btn.style.backgroundColor = 'aqua';
   setTimeout(() => {
     btn.style.backgroundColor = '#212227';
-  }, 250);
+  }, 5000);
 }
 
 setInterval(pulseColor, 500);
 
 setTimeout(() => {
-  clearInterval(Interval);
+  clearInterval(setInterval);
   btn.style.backgroundColor = '#212227';
 }, 5000)
