@@ -21,18 +21,18 @@ function loadHtml(id, filename) {
   }
 }
 
-// Pulses the color of a button on click
-function pulse(id) {
-  const btn = document.getElementById(id);
-  btn.style.backgroundColor = 'aqua';
-  setTimeout(() => {
-    btn.style.backgroundColor = '#212227';
-  }, 5000);
+// Getting all the elements of class btn
+let lastClickedBtn = null;
+
+function highlightButton(btn) {
+  if (lastClickedBtn !== null && lastClickedBtn !== btn) {
+    lastClickedBtn.classList.remove('highlight')
+  }
+
+  if (btn != lastClickedBtn) {
+    btn.classList.add('highlight');
+    lastClickedBtn = btn;
+  } else {
+    lastClickedBtn = null;
+  }
 }
-
-setInterval(pulseColor, 500);
-
-setTimeout(() => {
-  clearInterval(setInterval);
-  btn.style.backgroundColor = '#212227';
-}, 5000)

@@ -24,6 +24,13 @@ hr {
   justify-content: center;
 }
 
+#blank {
+  display: block;
+  align-items: center;
+  text-align: center;
+  image-resolution: 10px, 10px;
+}
+
 #site-nav {
   background-color: #4F5D75;
   color: #1e1c1a;
@@ -83,6 +90,11 @@ hr {
   font-family: monospace;
   color: #CBB69F;
   background-color: #212227;
+}
+
+.highlight {
+  background-color: #2d535b;
+  color: #17120E;
 }
 
 .input {
