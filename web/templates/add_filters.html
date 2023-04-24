@@ -1,8 +1,36 @@
-<div id="data_input">
+<div id="data-input">
   <h4>Enter Filter Information Below</h4>
   <div id="single_entry">
+    <form method="post">
+
+      <div class="input">
+        <label for="filterID">Filter Id</label>
+        <input type="number" id="filterID" name="filterID">
+      </div>
+
+      <div class="input">
+        <label for="name">Filter Name</label>
+        <input type="text" id="name" name="name">
+      </div>
+
+      <div class="input">
+        <label for="clientCat">Client Category</label>
+        <input type="text" id="clientCat" name="clientCat">
+      </div>
+    </form>
+    <input type="reset" class="btn" value="Clear">
+    <input type="submit" class="btn" value="Submit">
+
 
   </div>
 
-  <div id="csv_entry"></div>
+  <div id="csv-entry"></div>
+  <form method="post">
+    <label for="csv">Enter CSV</label>
+    <input type="file" value="Enter csv" class="csv-field" name="csv">
+
+    <input type="submit" value="Submit">
+
+  </form>
+
 </div>
