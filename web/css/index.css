@@ -76,6 +76,10 @@ hr {
   background-color: #212227;
 }
 
+.btn:active {
+  background-color: aqua;
+}
+
 .input {
   display: flex;
 }
