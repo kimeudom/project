@@ -1,7 +1,7 @@
 let mariadb = require('mariadb');
 
 // Connection Pool
-var pool = mariadb.createPool({
+const pool = mariadb.createPool({
   host: 'localhost',
   user: 'sms',
   password: 'pass1234',
