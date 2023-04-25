@@ -8,7 +8,14 @@ var pool = mariadb.createPool({
   database: 'smsCB',
 });
 
-module.exports = Object.freeze({
-  pool: pool
-});
+// Creating and exporting a connection object
 
+module.exports = {
+  getConnection: function () {
+    return pool.getConnection().then(function (conn) {
+      return conn;
+    }).catch(function (err) {
+      throw err;
+    });
+  }
+};
