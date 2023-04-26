@@ -1,7 +1,7 @@
 <div id="data-input">
   <h4>Enter Client Information Below</h4>
   <div id="single_entry">
-    <form method="post">
+    <form method="post" action="/client">
       <div class="input">
         <label for="tel">Telephone Number</label>
         <input type="text" name="tel" id="tel">
@@ -26,6 +26,11 @@
         <label for="connStatus">Connection Status</label>
         <input type="radio" name="connStatus" id="connStatus">
       </div>
+      <div class="input">
+        <label for="category">Client Category</label>
+        <input type="text" name="category" id="category">
+      </div>
+
 
       <input type="reset" class="btn" value="Clear">
       <input type="submit" class="btn" value="Submit">
@@ -37,7 +42,8 @@
     <form method="post">
 
       <label for="csv">Enter File</label>
-      <input type="submit" value="Browse" class="csv-field" name="csv">
+      <input type="submit" value="Browse" class="csv-field btn" name="csv">
+      <input type="submit" value="Submit" class="btn">
     </form>
   </div>
 </div>
