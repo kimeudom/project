@@ -65,7 +65,8 @@ CREATE TABLE zones(
   zoneID INT PRIMARY KEY AUTO_INCREMENT,
   zoneName VARCHAR(255),
   longitude float(15,2) not null,
-  latitude float(15,2) not null
+  latitude float(15,2) not null,
+  radius float(15,2)
 );
 
 /*Filter Tables*/

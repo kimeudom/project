@@ -1,11 +1,11 @@
 <div id="data-input">
   <h3>Enter Zone Information Below</h3>
   <div id="single_entry">
-    <form method="post">
+    <form method="post" action="/zone">
 
       <div class="input">
         <label for="zoneID">Zone Id</label>
-        <input type="number" id="zoneId" name="zoneId">
+        <input type="number" id="zoneID" name="zoneID">
       </div>
 
       <div class="input">
@@ -22,9 +22,13 @@
         <label for="longitude">Longitude (E+) (W-)</label>
         <input type="number" id="longitude" name="longitude">
       </div>
+      <div class="input">
+        <label for="radius">Zone Radius(m)</label>
+        <input type="number" id="radius" name="radius">
+      </div>
+      <input type="reset" class="btn" value="Clear">
+      <input type="submit" class="btn" value="Submit">
     </form>
-    <input type="reset" class="btn" value="Clear">
-    <input type="submit" class="btn" value="Submit">
 
   </div>
 

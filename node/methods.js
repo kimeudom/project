@@ -36,10 +36,18 @@ const addClient = (tel, cellID, baseID, lastConnectedZone, lastConnectedBase, ca
   });
 });
 
+const addZone = (zoneID, zoneName, longitude, latitude, radius) => db.getConnection().then(function (conn) {
+  statement = `INSERT INTO zones(zoneID, zoneName, longitude, latitude, radius) VALUES ("${zoneID}","${zoneName}","${longitude}","${latitude}", "${radius}")`;
+  conn.query(statement, function (err, res) {
+    if (err) throw err;
+  });
+}); 
+
 module.exports = {
   addCarrier,
   addBaseStation,
   addCell,
-  addClient
+  addClient,
+  addZone
 };
 

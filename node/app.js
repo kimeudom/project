@@ -3,7 +3,13 @@ const app = express();
 const path = require("path");
 const port = 55555;
 const bodyParaser = require("body-parser");
-const { addCarrier, addBaseStation, addCell, addClient } = require('./methods');
+const {
+  addCarrier,
+  addBaseStation,
+  addCell,
+  addClient,
+  addZone
+} = require('./methods');
 
 // Setting up middleware
 app.use(bodyParaser.json());
@@ -73,4 +79,20 @@ app.post('/client', (req, res) => {
   // Redirect to home
   res.redirect('/');
 
+})
+
+app.post('/zone', (req, res) => {
+  // Get the variables
+  const zone = req.body.zoneID;
+  const name = req.body.name;
+  const lat = req.body.latitude;
+  const lon = req.body.longitude;
+  const rad = req.body.radius;
+
+
+  // Post to the database
+  addZone(zone, name, lat, lon, rad);
+
+  // Redirect to home
+  res.redirect('/');
 })
