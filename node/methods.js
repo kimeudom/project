@@ -18,9 +18,17 @@ const addBaseStation = (id, carrierID, longitude, latitude, maxConnected) => db.
   });
 });
 
+const addCell = (id, baseID, longitude, latitude, maxConnected) => db.getConnection().then(function (conn) {
+  statement = `INSERT INTO cells(id, baseID, longitude, latitude, maxConnected) VALUES ("${id}","${baseID}","${longitude}","${latitude}","${maxConnected}")`;
+  conn.query(statement, function (err, result) {
+    if (err) throw err;
+  });
+});
+
 
 module.exports = {
   addCarrier,
-  addBaseStation
+  addBaseStation,
+  addCell
 };
 
