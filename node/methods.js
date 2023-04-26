@@ -25,10 +25,21 @@ const addCell = (id, baseID, longitude, latitude, maxConnected) => db.getConnect
   });
 });
 
+const addClient = (tel, cellID, baseID, lastConnectedZone, lastConnectedBase, categories) => db.getConnection().then(function (conn) {
+  let status = 0;
+  if (categories === "on") {
+    status = 1;
+  }
+  statement = `INSERT INTO clients(tel, cellID, baseID, lastConnectedZone, lastConnectedBase, connectionStatus) VALUES("${tel}","${cellID}","${baseID}","${lastConnectedZone}","${lastConnectedBase}","${status}")`;
+  conn.query(statement, function (err, result) {
+    if (err) throw err;
+  });
+});
 
 module.exports = {
   addCarrier,
   addBaseStation,
-  addCell
+  addCell,
+  addClient
 };
 

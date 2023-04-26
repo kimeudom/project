@@ -3,7 +3,7 @@ const app = express();
 const path = require("path");
 const port = 55555;
 const bodyParaser = require("body-parser");
-const { addCarrier, addBaseStation, addCell } = require('./methods');
+const { addCarrier, addBaseStation, addCell, addClient } = require('./methods');
 
 // Setting up middleware
 app.use(bodyParaser.json());
@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 })
 
 // Post Carrier
-app.post('/client', (req, res) => {
+app.post('/carrier', (req, res) => {
   const name = req.body.name;
   const id = req.body.carrierID;
   addCarrier(id, name);
@@ -58,3 +58,19 @@ app.post('/cell', (req, res) => {
   // Redirect to home
   res.redirect('/');
 });
+
+app.post('/client', (req, res) => {
+  // Get the variables
+  const tel = req.body.tel;
+  const cell = req.body.cellID;
+  const base = req.body.baseID;
+  const lastCell = req.body.lastCellID;
+  const lastBase = req.body.lastBaseID;
+  const connStatus = req.body.connStatus;
+  const category = 0;
+  // Post to the database
+  addClient(tel, cell, base, lastCell, lastBase, connStatus, category);
+  // Redirect to home
+  res.redirect('/');
+
+})
