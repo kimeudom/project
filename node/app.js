@@ -3,7 +3,7 @@ const app = express();
 const path = require("path");
 const port = 55555;
 const bodyParaser = require("body-parser");
-const { addCarrier } = require('./methods');
+const { addCarrier, addBaseStation } = require('./methods');
 
 // Setting up middleware
 app.use(bodyParaser.json());
@@ -27,3 +27,20 @@ app.post('/client', (req, res) => {
   res.redirect("/");
 } );
 
+// Post Base Station
+
+app.post('/baseStation', (req, res) => {
+  // Get the variables
+  const id = req.body.bstationID;
+  const carrierID = req.body.carrierID;
+  const lon = req.body.longitude;
+  const lat = req.body.latitude;
+  const max = req.body.maxConn;
+
+  // Post to the database
+  console.log(` ${id} \n ${carrierID} \n ${lon} \n ${lat} \n ${max} `);
+  addBaseStation(id, carrierID, lon, lat, max);
+
+  // redirect to home
+  res.redirect('/');
+});
