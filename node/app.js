@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
-const router = require('./routes');
 const path = require("path");
-const port = 42069;
+const port = 55555;
 const bodyParaser = require("body-parser");
+const { addCarrier } = require('./methods');
 
 // Setting up middleware
 app.use(bodyParaser.json());
@@ -15,14 +15,15 @@ app.listen(port, (req, res) => {
   console.log(`Server is live on port ${port} ...`);
 })
 
-app.get('/client', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile('/home/dom/imp/project/node/web/index.html');
-
-});
+})
 
 // Post Carrier
 app.post('/client', (req, res) => {
   const name = req.body.name;
-  const id = req.body.id;
+  const id = req.body.carrierID;
   addCarrier(id, name);
+  res.redirect("/");
 } );
+

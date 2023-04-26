@@ -3,7 +3,7 @@ const router = express.Router();
 
 const {
   addCarrier
-} = require("./methods");
+} = require("./methods.js");
 
 router.route('/carrier').post(addCarrier);
 
