@@ -31,7 +31,7 @@ const addClient = (tel, cellID, baseID, lastConnectedCell, lastConnectedBase, st
   if (status ===  "on") {
     status = 1;
   }
-  statement = `INSERT INTO clients(tel, cellID, baseID, lastConnectedCell, lastConnectedBase, connectionStatus, categories) VALUES("${tel}","${cellID}","${baseID}","${lastConnectedCell}","${lastConnectedBase}","${status}", "${categories}" )`;
+  statement = `INSERT INTO clients(tel, cellID, baseID, lastConnectedCell, lastConnectedBase, connectionStatus, categoriee) VALUES("${tel}","${cellID}","${baseID}","${lastConnectedCell}","${lastConnectedBase}","${status}", "${categories}" )`;
   conn.query(statement, function (err, result) {
     if (err) throw err;
   });

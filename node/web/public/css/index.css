@@ -101,3 +101,9 @@ hr {
   display: flex;
   justify-content: space-between;
 }
+
+#map {
+  height: 300px;
+  width: 500px;
+  background-color: gray;
+}
