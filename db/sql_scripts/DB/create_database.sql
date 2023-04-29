@@ -23,10 +23,10 @@ create table clients(
   tel VARCHAR(20)not null primary key,
   cellID int not null,
   baseID int not null,
-  lastConnectedZone int,
+  lastConnectedCell int,
   lastConnectedBase int,
   connectionStatus binary default 0,
-  categories JSON
+  categories VARCHAR(100)
 );
 
 /*Carriers Table*/
@@ -42,8 +42,8 @@ DROP TABLE IF EXISTS bstations;
 create table bstations(
   id int primary key,
   carrierID int not null,
-  longitude float(15,2) not null,
   latitude float(15,2) not null,
+  longitude float(15,2) not null,
   maxConnected int not null
 );
 
@@ -53,8 +53,8 @@ DROP TABLE IF EXISTS cells;
 create table cells(
   id int primary key,
   baseID int not null,
-  longitude float(15,2) not null,
   latitude float(15,2) not null,
+  longitude float(15,2) not null,
   maxConnected int not null
 );
 
@@ -64,8 +64,8 @@ DROP TABLE IF EXISTS zones;
 CREATE TABLE zones(
   zoneID INT PRIMARY KEY AUTO_INCREMENT,
   zoneName VARCHAR(255),
-  longitude float(15,2) not null,
   latitude float(15,2) not null,
+  longitude float(15,2) not null,
   radius float(15,2)
 );
 
