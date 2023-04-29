@@ -1,6 +1,8 @@
 // Handles all post and get operations
 const db= require('./db_connect');
 
+///////////////////////////////////////////////////////////////////////////////
+
 // Insert value in the clients table
 const addCarrier = (id, name) => db.getConnection().then(function (conn) {
   statement = `INSERT INTO carriers(id, carrierName) VALUES("${id}","${name}")`;
@@ -25,16 +27,17 @@ const addCell = (id, baseID, longitude, latitude, maxConnected) => db.getConnect
   });
 });
 
-const addClient = (tel, cellID, baseID, lastConnectedZone, lastConnectedBase, categories) => db.getConnection().then(function (conn) {
-  let status = 0;
-  if (categories === "on") {
+const addClient = (tel, cellID, baseID, lastConnectedCell, lastConnectedBase, status, categories) => db.getConnection().then(function (conn) {
+  if (status ===  "on") {
     status = 1;
   }
-  statement = `INSERT INTO clients(tel, cellID, baseID, lastConnectedZone, lastConnectedBase, connectionStatus) VALUES("${tel}","${cellID}","${baseID}","${lastConnectedZone}","${lastConnectedBase}","${status}")`;
+  statement = `INSERT INTO clients(tel, cellID, baseID, lastConnectedCell, lastConnectedBase, connectionStatus, categories) VALUES("${tel}","${cellID}","${baseID}","${lastConnectedCell}","${lastConnectedBase}","${status}", "${categories}" )`;
   conn.query(statement, function (err, result) {
     if (err) throw err;
   });
 });
+
+// CSV support
 
 const addZone = (zoneID, zoneName, longitude, latitude, radius) => db.getConnection().then(function (conn) {
   statement = `INSERT INTO zones(zoneID, zoneName, longitude, latitude, radius) VALUES ("${zoneID}","${zoneName}","${longitude}","${latitude}", "${radius}")`;

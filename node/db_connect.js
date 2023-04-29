@@ -6,6 +6,7 @@ const pool = mariadb.createPool({
   user: 'sms',
   password: 'pass1234',
   database: 'smsCB',
+  permitLocalInfile: true
 });
 
 // Creating and exporting a connection object

@@ -30,9 +30,11 @@
   </div>
 
   <div id="csv-entry">
-    <label for="csv">Enter the csv file</label>
-    <input type="file" id="csv" name="csv" class="csv-field">
-    <input type="submit" class="btn">
+    <form action="/cells" method="post" enctype="multipart/form-data">
+      <label for="csv">Enter the csv file</label>
+      <input type="file" id="csv" name="csv" class="csv-field">
+      <input type="submit" class="btn" value="Upload">
+    </form>
   </div>
 
 </div>
