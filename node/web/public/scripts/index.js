@@ -50,9 +50,9 @@ async function initMap() {
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
 
-  // The map, centered at Uluru
+  // The map, centered at Nariobi
   map = new Map(document.getElementById("map"), {
-    zoom: 6,
+    zoom: 10,
     center: position,
     mapId: "NAIROBI CBD",
   });
