@@ -42,8 +42,8 @@ DROP TABLE IF EXISTS bstations;
 create table bstations(
   id int primary key,
   carrierID int not null,
-  latitude float(15,2) not null,
-  longitude float(15,2) not null,
+  latitude float(15,15) not null,
+  longitude float(15,15) not null,
   maxConnected int not null
 );
 
@@ -53,8 +53,8 @@ DROP TABLE IF EXISTS cells;
 create table cells(
   id int primary key,
   baseID int not null,
-  latitude float(15,2) not null,
-  longitude float(15,2) not null,
+  latitude float(15,15) not null,
+  longitude float(15,15) not null,
   maxConnected int not null
 );
 
@@ -64,9 +64,9 @@ DROP TABLE IF EXISTS zones;
 CREATE TABLE zones(
   zoneID INT PRIMARY KEY AUTO_INCREMENT,
   zoneName VARCHAR(255),
-  latitude float(15,2) not null,
-  longitude float(15,2) not null,
-  radius float(15,2)
+  latitude float(15,15) not null,
+  longitude float(15,15) not null,
+  radius float(15,15)
 );
 
 /*Filter Tables*/
