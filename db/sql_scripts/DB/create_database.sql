@@ -11,7 +11,7 @@ v=1.2
 DROP TABLE IF EXISTS msg;
 create table msg(
   id int AUTO_INCREMENT primary key,
-  clientID varchar(20) not null,
+  clientID varchar(25) not null,
   msg MEDIUMTEXT not null,
   categories JSON
 );
@@ -20,7 +20,7 @@ create table msg(
 DROP TABLE IF EXISTS clients;
 
 create table clients(
-  tel VARCHAR(20)not null primary key,
+  tel VARCHAR(25)not null primary key,
   cellID int not null,
   baseID int not null,
   lastConnectedCell int,
@@ -42,8 +42,8 @@ DROP TABLE IF EXISTS bstations;
 create table bstations(
   id int primary key,
   carrierID int not null,
-  latitude float(15,15) not null,
-  longitude float(15,15) not null,
+  latitude decimal(25,19) not null,
+  longitude decimal(25,19) not null,
   maxConnected int not null
 );
 
@@ -53,8 +53,8 @@ DROP TABLE IF EXISTS cells;
 create table cells(
   id int primary key,
   baseID int not null,
-  latitude float(15,15) not null,
-  longitude float(15,15) not null,
+  latitude decimal(25,19) not null,
+  longitude decimal(25,19) not null,
   maxConnected int not null
 );
 
@@ -64,9 +64,9 @@ DROP TABLE IF EXISTS zones;
 CREATE TABLE zones(
   zoneID INT PRIMARY KEY AUTO_INCREMENT,
   zoneName VARCHAR(255),
-  latitude float(15,15) not null,
-  longitude float(15,15) not null,
-  radius float(15,15)
+  latitude decimal(25,19) not null,
+  longitude decimal(25,19) not null,
+  radius decimal(25,19)
 );
 
 /*Filter Tables*/
