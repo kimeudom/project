@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ea2fcdca9f0cf152",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.2.7"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -62,6 +73,14 @@
             "type": "leaf",
             "state": {
               "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "7f8cda7bfd114959",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
               "state": {}
             }
           }
@@ -146,7 +165,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e040995d98cfe5ce",
+  "active": "ea2fcdca9f0cf152",
   "lastOpenFiles": [
     "Lib 12th Apr.md"
   ]

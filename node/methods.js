@@ -43,6 +43,7 @@ const addZone = (zoneID, zoneName, longitude, latitude, radius) => db.getConnect
   statement = `INSERT INTO zones(zoneID, zoneName, longitude, latitude, radius) VALUES ("${zoneID}","${zoneName}","${longitude}","${latitude}", "${radius}")`;
   conn.query(statement, function (err, res) {
     if (err) throw err;
+    return res;
   });
 }); 
 

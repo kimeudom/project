@@ -3,12 +3,17 @@ const multer = require('multer');
 const fs = require('fs');
 const csv = require('fast-csv');
 
+// Db requirements
+const db= require('./db_connect');
+
 // app requirements
 const express = require('express');
 const app = express();
 const path = require("path");
 const port = 55555;
 const bodyParaser = require("body-parser");
+const http = require("http");
+const fetch = require("fetch");
 ///////////////////////////////////////////////////////////////////////////////
 
 // Single post methods
@@ -28,6 +33,11 @@ const {
   addClients,
   addZones
 } = require('./fileUpload');
+
+// Map methods
+const {
+  getBases
+} = require('./map')
 
 // Setting up middleware
 app.use(bodyParaser.json());
@@ -174,3 +184,10 @@ app.post('/zones', upload.single('csv'), async (req, res) => {
   addZones(send('/tmp/' + req.file.filename));
   res.redirect('/');
 });
+
+app.get('/getBases/:carrierID', (req, res) => {
+  const carrierID = req.params.carrierID;
+  data = getBases(carrierID);
+  res.send(data);
+})
+

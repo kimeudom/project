@@ -41,10 +41,18 @@ function highlightButton(btn) {
 
 // Initialize and add the map
 let map;
+let isMapSet = false;
+function reloadMap() {
+  if (isMapSet === true) {
+    return
+  }
+  initMap();
+}
 
 async function initMap() {
   // Nairobi Coordinates
   const position = { lat: -1.289112, lng: 36.823288 };
+  const archives = { lat: -1.2848900588454208, lng: 36.82551696564829};
   // Request needed libraries.
   //@ts-ignore
   const { Map } = await google.maps.importLibrary("maps");
@@ -52,15 +60,34 @@ async function initMap() {
 
   // The map, centered at Nariobi
   map = new Map(document.getElementById("map"), {
-    zoom: 10,
+    zoom: 13,
     center: position,
     mapId: "NAIROBI CBD",
   });
 
-  // The marker, positioned at Uluru
-  const marker = new AdvancedMarkerView({
-    map: map,
-    position: position,
-    title: "CBD",
-  });
+  // Fetching bases
+  for (let i = 0; i < 4; i++){
+    fetch(`/getBases/${i}`)
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }
+}
+
+
+function test() {
+  // Getting the bases
+  dataArray = []
+  for (let i = 1; i < 4; i++) {
+    fetch(`http://localhost:55555/getBases/`)
+      .then(res => res.json())
+      .then(data => {
+        dataArray += data;
+      });
+  }
+  console.log(dataArray);
 }
