@@ -14,7 +14,7 @@ const addCarriers = (csv) => db.getConnection().then((conn) => {
 
 // Insert csv in bstations
 const addBaseStations = (csv) => db.getConnection().then((conn) => {
-  statement = `LOAD DATA INFILE "${csv}" INTO TABLE bstations FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 ROWS (id, carrierID, longitude, latitude, maxConnected)`;
+  statement = `LOAD DATA INFILE "${csv}" INTO TABLE bstations FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 ROWS (id, carrierID, latitude, longitude, maxConnected)`;
   conn.query(statement, (err, res) => {
     if (err) throw err;
   });
