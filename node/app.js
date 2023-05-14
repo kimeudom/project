@@ -188,6 +188,6 @@ app.post('/zones', upload.single('csv'), async (req, res) => {
 app.get('/getBases/:carrierID', (req, res) => {
   const carrierID = req.params.carrierID;
   data = getBases(carrierID);
-  res.send(data);
+  res.status(200).json(data);
 })
 

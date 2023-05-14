@@ -7,8 +7,8 @@
   <link rel="stylesheet" type="text/css" href="./css/index.css">
   <script src="./scripts/index.js"></script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX-HF4LHmA6Nhgm2k-oUs3KueCL09MHa0"></script>
-
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX-HF4LHmA6Nhgm2k-oUs3KueCL09MHa0&callback=initMap"
+    async defer></script>
 </head>
 
 <body>
@@ -47,7 +47,7 @@
       <p>Actions</p>
       <div id="nav-items" class="list-vertical">
         <a class="tag" href="#"><button class="btn"
-            onclick="loadHtml('main-content', 'broadcast.html'); highlightButton(this); reloadMap()">Broadcast</button></a>
+            onclick="loadHtml('main-content', 'broadcast.html'); highlightButton(this); initMap()">Broadcast</button></a>
         <a class="tag" href="#"><button class="btn"
             onclick="loadHtml('main-content', 'base_stations.html'); highlightButton(this)">View
             Broadcasts
