@@ -113,6 +113,17 @@ async function initMap() {
           title: "Zone Center",
           draggable: false,
         });
+
+        const cellCircle = new google.maps.Circle({
+          strokeColor: "#FF000",
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: "FF0000",
+          fillOpacity: 0.35,
+          map: map,
+          center: cells[i][j][k],
+          radius: 1000
+        });
       }
     }
   }
