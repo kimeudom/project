@@ -185,9 +185,63 @@ app.post('/zones', upload.single('csv'), async (req, res) => {
   res.redirect('/');
 });
 
-app.get('/getBases/:carrierID', (req, res) => {
+app.get('/getBases/:carrierID', async (req, res) => {
   const carrierID = req.params.carrierID;
-  data = getBases(carrierID);
-  res.status(200).json(data);
+  statement = `SELECT latitude, longitude FROM bstations WHERE carrierID = "${carrierID}"`;
+  try {
+    conn = await db.getConnection();
+    const rows = await conn.query(statement);
+    res.status(200).json(rows);
+  }
+  catch(err) {
+    if (err) throw err;
+  }
+})
+
+app.get('/getAllBases/', async (req, res) => {
+  statement = `SELECT latitude, longitude FROM bstations`;
+  try {
+    conn = await db.getConnection();
+    const rows = await conn.query(statement);
+    res.status(200).json(rows);
+  }
+  catch(err) {
+    if (err) throw err;
+  }
+})
+
+
+app.get('/getCells/:baseID', async (req, res) => {
+  const baseID = req.params.baseID;
+  statement = `SELECT latitude, longitude FROM cells WHERE baseID="${baseID}"`;
+  try {
+    conn = await db.getConnection();
+    const rows = await conn.query(statement);
+    res.status(200).json(rows);
+  } catch (err) {
+    if (err) throw err;
+  }
+})
+
+app.get('/getAllCells/', async (req, res) => {
+  statement = `SELECT latitude, longitude FROM cells`;
+  try {
+    conn = await db.getConnection();
+    const rows = await conn.query(statement);
+    res.status(200).json(rows);
+  } catch (err) {
+    if (err) throw err;
+  }
+})
+
+app.get('/getCarriers', async (req, res) => {
+  statement = "SELECT * FROM carriers";
+  try {
+    conn = await db.getConnection();
+    const rows = await conn.query(statement);
+    res.status(200).json(rows);
+  } catch (err) {
+    if (err) throw err;
+  }
 })
 
