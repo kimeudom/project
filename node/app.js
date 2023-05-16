@@ -196,6 +196,9 @@ app.get('/getBases/:carrierID', async (req, res) => {
   catch(err) {
     if (err) throw err;
   }
+  finally {
+    if (conn) conn.release();
+  }
 })
 
 app.get('/getAllBases/', async (req, res) => {
@@ -207,6 +210,9 @@ app.get('/getAllBases/', async (req, res) => {
   }
   catch(err) {
     if (err) throw err;
+  }
+  finally {
+    if (conn) conn.release();
   }
 })
 
@@ -221,6 +227,9 @@ app.get('/getCells/:baseID', async (req, res) => {
   } catch (err) {
     if (err) throw err;
   }
+  finally {
+    if (conn) conn.release();
+  }
 })
 
 app.get('/getAllCells/', async (req, res) => {
@@ -232,6 +241,9 @@ app.get('/getAllCells/', async (req, res) => {
   } catch (err) {
     if (err) throw err;
   }
+  finally {
+    if (conn) conn.release();
+  }
 })
 
 app.get('/getCarriers', async (req, res) => {
@@ -242,6 +254,9 @@ app.get('/getCarriers', async (req, res) => {
     res.status(200).json(rows);
   } catch (err) {
     if (err) throw err;
+  }
+  finally {
+    if (conn) conn.release();
   }
 })
 
