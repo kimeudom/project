@@ -47,7 +47,7 @@
       <p>Actions</p>
       <div id="nav-items" class="list-vertical">
         <a class="tag" href="#"><button class="btn"
-            onclick="loadHtml('main-content', 'broadcast.html'); highlightButton(this); initMap()">Broadcast</button></a>
+            onclick="loadHtml('main-content', 'broadcast.html'); highlightButton(this); reloadMap()">Broadcast</button></a>
         <a class="tag" href="#"><button class="btn"
             onclick="loadHtml('main-content', 'base_stations.html'); highlightButton(this)">View
             Broadcasts
@@ -67,6 +67,9 @@
       <div id="blank">
         <img src="./src/images/broadcast.png" style="background-color: transparent; height: 200px; width: 200px;">
         <p>Select an action to get started</p>
+        <div id="mapContainer">
+          <div id="map" style="height: 0px; width: 0px;"></div>
+        </div>
       </div>
     </div>
   </div>
