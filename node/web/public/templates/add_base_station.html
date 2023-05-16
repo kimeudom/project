@@ -12,11 +12,12 @@
       </div>
       <div class="input">
         <label for="longitude">Longitude: </label>
-        <input type="number" id="longitude" name="longitude">
+        <input type="number" id="longitude" name="longitude" step="any" max="180" min="-180"
+          placeholder="-180>= lng >=180">
       </div>
       <div class="input">
         <label for="latitude">Latitude: </label>
-        <input type="number" id="latitude" name="latitude">
+        <input type="number" id="latitude" name="latitude" step="any" max="90" min="-90" placeholder="-90>= lat >=90">
       </div>
       <div class="input">
         <label for="maxConn">Maximum connections: </label>
