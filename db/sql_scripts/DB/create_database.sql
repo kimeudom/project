@@ -12,8 +12,6 @@ DROP TABLE IF EXISTS msg;
 create table msg(
   id int AUTO_INCREMENT primary key,
   clientID varchar(25) not null,
-  msg MEDIUMTEXT not null,
-  categories JSON
 );
 
 /* Clients Table*/
@@ -79,7 +77,14 @@ CREATE TABLE filters(
   clientCategory INT
 );
 
-
+/*Msg payload*/
+CREATE TABLE msgPayload(
+  id INT PRIMARY KEY,
+  msg VARCHAR(255),
+  lat decimal(25,19) not null,
+  lng decimal(25,19) not null,
+  radius decimal(25,19) not null
+);
 
 
 /*Relationships*/
@@ -98,3 +103,7 @@ ALTER TABLE clients ADD CONSTRAINT fk_clients_bstations FOREIGN KEY (baseID) REF
 
 /* Client and msg*/
 ALTER TABLE msg ADD CONSTRAINT fk_msg_client FOREIGN KEY (clientID) REFERENCES clients(tel);
+
+
+/*msg and msg Payload*/
+ALTER TABLE msg ADD CONSTRAINT fk_msg_payload FOREIGN KEY(id) REFERENCES msgPayload(id);
