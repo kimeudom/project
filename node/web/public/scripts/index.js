@@ -77,10 +77,34 @@ async function initMap() {
     mapId: '2600f378d59f65e8'
   });
 
+  // Adding right click functionality
+  map.addListener("rightclick", (event) => {
+    console.log("Right clicked")
+    var lat = event.latLng.lat();
+    var lng = event.latLng.lng();
+    // Define broadcast circle
+    const broadcastCircle = new google.maps.Circle({
+          strokeColor: "#32c755",
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: "#32c755",
+          fillOpacity: 0.55,
+          map: map,
+          center: { lat: lat, lng: lng },
+          radius: 1000,
+          draggable: true,
+          editable: true
+    })
+  })
+
+  // Appending a broadcast button
+
 
   // Show tbe bases and cells
   //showBases()
   showCells()
+
+  // Defines the broadcast Circle
 
   function showBases() {
     fetch('http://localhost:55555/getAllBases')
