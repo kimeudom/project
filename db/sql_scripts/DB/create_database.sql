@@ -10,7 +10,7 @@ v=1.2
 /* Messages Table */
 DROP TABLE IF EXISTS msg;
 create table msg(
-  id int AUTO_INCREMENT primary key,
+  id int primary key,
   clientID varchar(25) not null,
 );
 
