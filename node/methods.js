@@ -47,11 +47,24 @@ const addZone = (zoneID, zoneName, longitude, latitude, radius) => db.getConnect
   });
 }); 
 
+const sendMsg = (msg, lat, lng, radius) => db.getConnection().then((conn) => {
+  timestmp = Date.now()
+  statement = `INSERT INTO msgPayload(id, msg, lat, lng, radius) VALUES ("${timestmp}", "${msg}", "${lat}", "${lng}", "${radius}")`;
+  conn.query(statement, (err, res) => {
+    if (err) throw err;
+  });
+  msgStatement = `INSERT INTO msg(id, clientID, categories) VALUES ("${timestmp}", "+254700005272", General Public)`;
+  conn.query(msgStatement, (err, res) => {
+    if (err) throw err;
+  });
+});
+
 module.exports = {
   addCarrier,
   addBaseStation,
   addCell,
   addClient,
-  addZone
+  addZone,
+  sendMsg
 };
 

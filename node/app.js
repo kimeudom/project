@@ -23,6 +23,7 @@ const {
   addCell,
   addClient,
   addZone,
+  sendMsg,
 } = require('./methods');
 
 // CSV methods
@@ -185,6 +186,21 @@ app.post('/zones', upload.single('csv'), async (req, res) => {
   res.redirect('/');
 });
 
+// Post msg payload
+
+app.post('/sendMsg', (req, res) => {
+  console.log(req.body);
+  // Get the variables 
+  const msg = req.body.msg;
+  const lat = req.body.latitude;
+  const lng = req.body.longitude;
+  const rad = req.body.radius;
+
+  sendMsg(msg, lat, lng, rad);
+  res.redirect('/')
+})
+
+
 app.get('/getBases/:carrierID', async (req, res) => {
   const carrierID = req.params.carrierID;
   statement = `SELECT latitude, longitude FROM bstations WHERE carrierID = "${carrierID}"`;
@@ -256,6 +272,19 @@ app.get('/getCarriers', async (req, res) => {
     if (err) throw err;
   }
   finally {
+    if (conn) conn.release();
+  }
+})
+
+app.get('/getRecords', async (req, res) => {
+  statement = `SELECT * FROM msgPayload`;
+  try {
+    conn = await db.getConnection();
+    const rows = await conn.query(statement);
+    res.status(200).json(rows);
+  } catch (err) {
+    if (err) throw err;
+  } finally {
     if (conn) conn.release();
   }
 })

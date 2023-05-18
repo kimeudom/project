@@ -79,7 +79,8 @@ async function initMap() {
 
   // Adding right click functionality
   map.addListener("rightclick", (event) => {
-    console.log("Right clicked")
+ 
+       console.log("Right clicked")
     var lat = event.latLng.lat();
     var lng = event.latLng.lng();
     // Define broadcast circle
@@ -95,10 +96,57 @@ async function initMap() {
           draggable: true,
           editable: true
     })
+    // Appending a broadcast button
+    const content = document.getElementById("main-content");
+    const sendBtn = document.createElement("button")
+    sendBtn.className = "btn";
+    sendBtn.innerText = "Send";
+    sendBtn.style.marginLeft = "auto"
+    sendBtn.style.marginRight = "auto"
+    content.appendChild(sendBtn);
+    sendBtn.addEventListener("click", () => {
+      var msg = prompt("Enter Emergency Broadcast Message:");
+      console.log(msg + " in lat : " + lat + " and long: " + lng);
+    })
+
+      // Create a broadcast form
+      var form = document.createElement("form");
+      form.method("post")
+      form.action("/sendMsg")
+
+      // Input fields for the form
+      var message = document.createElement("input");
+      message.type = "text"
+      message.value = msg;
+      message.name = "msg"
+
+      var latitude = document.createElement("input");
+      latitude.type = "number";
+      latitude.value = lat;
+      latitude.name = "latitude"
+
+      var longitude = document.createElement("input");
+      longitude.type = "number";
+      longitude.value = lng;
+      longitude.name = "longitude"
+
+      var radius = document.createElement("input");
+      radius.value = "number";
+      radius.value = 1000;
+      radius.name = "radius"
+
+      // Append to the form the inputs
+      form.appendChild(message);
+      form.appendChild(latitude);
+      form.appendChild(longitude);
+      form.appendChild(radius);
+
+      // Submit the form
+      form.submit()
+ 
+
+
   })
-
-  // Appending a broadcast button
-
 
   // Show tbe bases and cells
   //showBases()
@@ -177,4 +225,73 @@ async function initMap() {
       }
     });
   }
+}
+
+// Reloads the  map in the map div
+function reloadMapZones() {
+  // Refreshes the map
+  const mapContainer = document.getElementById("main-content");
+  const map = document.getElementById("map");
+
+  map.remove();
+
+  const mapDiv = document.createElement("div");
+  mapDiv.id = "map";
+  mapContainer.appendChild(mapDiv);
+
+  wait(0.5, addZone);
+}
+
+async function addZone() {
+  let map;
+
+  // Nairobi Coordinates
+  const nrb = { lat: -1.289112, lng: 36.823288 };
+
+  // Request needed libraries.
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+  // Centering the map on nairobi
+  map = new Map(document.getElementById("map"), {
+    zoom: 11,
+    center: nrb,
+    mapId: '2600f378d59f65e8'
+  });
+
+  // Adding right click functionality
+  map.addListener("rightclick", (event) => {
+ 
+       console.log("Right clicked")
+    var lat = event.latLng.lat();
+    var lng = event.latLng.lng();
+    // Define broadcast circle
+    const broadcastCircle = new google.maps.Circle({
+          strokeColor: "#32c755",
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: "#32c755",
+          fillOpacity: 0.55,
+          map: map,
+          center: { lat: lat, lng: lng },
+          radius: 1000,
+          draggable: true,
+          editable: true
+    })
+
+    // Appending a broadcast button
+    const content = document.getElementById("main-content");
+    const sendBtn = document.createElement("button")
+    sendBtn.id = "snd_btn";
+    sendBtn.className = "btn";
+    sendBtn.innerText = "Set Broadcast";
+    sendBtn.style.marginLeft = "auto"
+    sendBtn.style.marginRight = "auto"
+    content.appendChild(sendBtn);
+
+    sendBtn.addEventListener("click", () => {
+      console.log(msg + " in lat : " + lat + " and long: " + lng);
+   })
+  })
 }
