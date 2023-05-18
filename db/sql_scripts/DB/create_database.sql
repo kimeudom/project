@@ -10,7 +10,7 @@ v=1.2
 /* Messages Table */
 DROP TABLE IF EXISTS msg;
 create table msg(
-  id BIG INT(16) primary key,
+  id BIGINT primary key,
   clientID varchar(25) not null,
 );
 
@@ -79,7 +79,7 @@ CREATE TABLE filters(
 
 /*Msg payload*/
 CREATE TABLE msgPayload(
-  id BIG INT(16) PRIMARY KEY,
+  id BIGINT PRIMARY KEY,
   msg VARCHAR(255),
   lat decimal(25,19) not null,
   lng decimal(25,19) not null,
