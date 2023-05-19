@@ -107,13 +107,14 @@ async function initMap() {
   content.appendChild(sendBtn);
   sendBtn.addEventListener("click", () => {
     var msg = prompt("Enter Emergency Broadcast Message:");
-    console.log(msg + " in lat : " + lat + " and long: " + lng);
+    console.log(broadcastCircle.getCenter());
+    console.log(broadcastCircle.getRadius());
 
     // Get the form input DOM 
     document.getElementById("msg").value = msg;
-    document.getElementById("latitude").value = lat;
-    document.getElementById("longitude").value = lng;
-    document.getElementById("radius").value = 1000;
+    document.getElementById("latitude").value = broadcastCircle.getCenter().lat();
+    document.getElementById("longitude").value = broadcastCircle.getCenter().lng();
+    document.getElementById("radius").value = broadcastCircle.getRadius();
     document.getElementById("broadcast-submit-button").click();
    })
  })
