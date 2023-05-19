@@ -331,7 +331,7 @@ function generateTableRows(records) {
       <td>${year}-${month}-${day} ${hours}:${minutes}:${seconds}</td>
       <td>${record.msg}</td>
       <td>${(record.radius / 1000).toFixed(3)} Km(s)</td>
-      <td><button class="btn">Visualize</button></td>
+      <td><button class="btn" onclick="visualizeMap(${record.lat}, ${record.lng}, ${record.radius})">Visualize</button></td>
     </tr>
     `;
   }
@@ -340,9 +340,51 @@ function generateTableRows(records) {
 }
 
 // Display records in a table
-function displayRecords(start, end, data) {
+function displayRecords(start, end, data, msg) {
   const tableBody = document.getElementById("table");
   const records = data.slice(start, end);
 
   tableBody.innerHTML = generateTableRows(records);
 }
+
+function visualizeMap(lat, lng, radius, msg) {
+  var mainContent = document.getElementById("main-content");
+ mainContent.innerHTML = `
+  <div id="map">
+  <script src="../scripts/map.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX-HF4LHmA6Nhgm2k-oUs3KueCL09MHa0&map_ids=2600f378d59f65e8&callback=visualize"></script>
+ 
+  </div> 
+  `;
+  async function visualize() {
+    let map;
+
+    const { Map } = await google.maps.importLibrary("maps");
+    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+    // Center the map on the broadcast zone
+    map = new Map(document.getElementById("map"), {
+      zoom: 11,
+      center: { lat: lat, lng: lng },
+      mapId: '2600f378d59f65e8'
+    });
+
+    // Former broadcast zone
+    const broadCastZone = new google.maps.Circle({
+      strokeColor: "#eb9534",
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: "#eb9534",
+      fillOpacity: 0.55,
+      map: map,
+      center: { lat: lat, lng: lng },
+      radius: radius,
+      draggable: false,
+      editable: false
+    })
+  }
+
+  visualize();
+}
+
