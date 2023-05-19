@@ -80,73 +80,43 @@ async function initMap() {
   // Adding right click functionality
   map.addListener("rightclick", (event) => {
  
-       console.log("Right clicked")
-    var lat = event.latLng.lat();
-    var lng = event.latLng.lng();
-    // Define broadcast circle
-    const broadcastCircle = new google.maps.Circle({
-          strokeColor: "#32c755",
-          strokeOpacity: 0.8,
-          strokeWeight: 2,
-          fillColor: "#32c755",
-          fillOpacity: 0.55,
-          map: map,
-          center: { lat: lat, lng: lng },
-          radius: 1000,
-          draggable: true,
-          editable: true
-    })
-    // Appending a broadcast button
-    const content = document.getElementById("main-content");
-    const sendBtn = document.createElement("button")
-    sendBtn.className = "btn";
-    sendBtn.innerText = "Send";
-    sendBtn.style.marginLeft = "auto"
-    sendBtn.style.marginRight = "auto"
-    content.appendChild(sendBtn);
-    sendBtn.addEventListener("click", () => {
-      var msg = prompt("Enter Emergency Broadcast Message:");
-      console.log(msg + " in lat : " + lat + " and long: " + lng);
-    })
-
-      // Create a broadcast form
-      var form = document.createElement("form");
-      form.method("post")
-      form.action("/sendMsg")
-
-      // Input fields for the form
-      var message = document.createElement("input");
-      message.type = "text"
-      message.value = msg;
-      message.name = "msg"
-
-      var latitude = document.createElement("input");
-      latitude.type = "number";
-      latitude.value = lat;
-      latitude.name = "latitude"
-
-      var longitude = document.createElement("input");
-      longitude.type = "number";
-      longitude.value = lng;
-      longitude.name = "longitude"
-
-      var radius = document.createElement("input");
-      radius.value = "number";
-      radius.value = 1000;
-      radius.name = "radius"
-
-      // Append to the form the inputs
-      form.appendChild(message);
-      form.appendChild(latitude);
-      form.appendChild(longitude);
-      form.appendChild(radius);
-
-      // Submit the form
-      form.submit()
- 
-
-
+  console.log("Right clicked")
+  var lat = event.latLng.lat();
+  var lng = event.latLng.lng();
+  // Define broadcast circle
+  const broadcastCircle = new google.maps.Circle({
+    strokeColor: "#32c755",
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: "#32c755",
+    fillOpacity: 0.55,
+    map: map,
+    center: { lat: lat, lng: lng },
+    radius: 1000,
+    draggable: true,
+   editable: true
   })
+
+  // Appending a broadcast button
+  const content = document.getElementById("main-content");
+  const sendBtn = document.createElement("button")
+  sendBtn.className = "btn";
+  sendBtn.innerText = "Send";
+  sendBtn.style.marginLeft = "auto"
+  sendBtn.style.marginRight = "auto"
+  content.appendChild(sendBtn);
+  sendBtn.addEventListener("click", () => {
+    var msg = prompt("Enter Emergency Broadcast Message:");
+    console.log(msg + " in lat : " + lat + " and long: " + lng);
+
+    // Get the form input DOM 
+    document.getElementById("msg").value = msg;
+    document.getElementById("latitude").value = lat;
+    document.getElementById("longitude").value = lng;
+    document.getElementById("radius").value = 1000;
+    document.getElementById("broadcast-submit-button").click();
+   })
+ })
 
   // Show tbe bases and cells
   //showBases()
@@ -294,4 +264,50 @@ async function addZone() {
       console.log(msg + " in lat : " + lat + " and long: " + lng);
    })
   })
+}
+
+function getRecords() {
+  document.getElementById("main-content");
+  fetch('http://localhost:55555/getRecords')
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("Error receiving records");
+      }
+      return res.json();
+  }) 
+    .then((records) => {
+      len = records.length
+      // creating the table
+      const table = document.createElement("table");
+      const thead = document.createElement("thread");
+      const tbody = document.createElement("tbody");
+
+
+      // Creating the table header row
+      const headerRow = document.createElement("tr");
+      for (const key in records[0]){
+        const th = document.getElementById("th");
+        th.textContent = key;
+        headerRow.appendChild(th);
+      }
+
+      thead.appendChild(headerRow)
+
+
+      // Table body
+      records.forEach(item => {
+        const row = document.getElementById("tr");
+        for (const key in item) {
+          const td = document.getElementById("td");
+          td.textContent = item[key];
+          row.appendChild(td);
+        }
+        tbody.appendChild(row);
+      });
+
+      // Assembling the table
+      table.appendChild(thead);
+      table.appendChild(tbody);
+      tableContainer.appendChild(table);
+    })
 }

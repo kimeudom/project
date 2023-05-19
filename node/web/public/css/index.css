@@ -107,3 +107,9 @@ hr {
   width: 800px;
   background-color: gray;
 }
+
+#broadcast-form {
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+}
