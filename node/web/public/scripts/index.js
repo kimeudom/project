@@ -331,7 +331,7 @@ function generateTableRows(records) {
       <td>${year}-${month}-${day} ${hours}:${minutes}:${seconds}</td>
       <td>${record.msg}</td>
       <td>${(record.radius / 1000).toFixed(3)} Km(s)</td>
-      <td><button class="btn" onclick="visualizeMap(${record.lat}, ${record.lng}, ${record.radius})">Visualize</button></td>
+      <td><button class="btn" onclick="visualizeMap(${record.lat}, ${record.lng}, ${record.radius}, ${record.id}, '${record.msg}')">Visualize</button></td>
     </tr>
     `;
   }
@@ -347,7 +347,7 @@ function displayRecords(start, end, data, msg) {
   tableBody.innerHTML = generateTableRows(records);
 }
 
-function visualizeMap(lat, lng, radius, msg) {
+function visualizeMap(lat, lng, radius, timestamp, msg) {
   var mainContent = document.getElementById("main-content");
  mainContent.innerHTML = `
   <div id="map">
@@ -370,8 +370,8 @@ function visualizeMap(lat, lng, radius, msg) {
       mapId: '2600f378d59f65e8'
     });
 
-    // Former broadcast zone
-    const broadCastZone = new google.maps.Circle({
+  // Former broadcast zone
+    broadCastZone = new google.maps.Circle({
       strokeColor: "#eb9534",
       strokeOpacity: 0.8,
       strokeWeight: 2,
@@ -382,9 +382,36 @@ function visualizeMap(lat, lng, radius, msg) {
       radius: radius,
       draggable: false,
       editable: false
-    })
-  }
+    });
 
+    const date = new Date(parseInt(timestamp));
+    console.log(timestamp)
+
+    // Get individual components of the date and time
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1; // Month is zero-based, so adding 1
+    const day = date.getDate();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+ 
+    messageBox = `
+    Timestamp: ${year}-${month}-${day} ${hours}:${minutes}:${seconds}<br>
+    Message Payload: <b>${msg}</b><br>
+    Broadcast Range: <b>${(radius).toFixed(3)} Km(s)</b>`
+
+    banner = new google.maps.InfoWindow({
+      content: messageBox,
+      position: broadCastZone.center,
+      map: map,
+      closeBoxUrl: '',
+      enableEventPropagation: true
+    });
+
+    broadCastZone.addListener("click", () => {
+      banner.open(map);
+    })
+ }
   visualize();
 }
 
