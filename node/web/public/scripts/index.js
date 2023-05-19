@@ -79,8 +79,6 @@ async function initMap() {
 
   // Adding right click functionality
   map.addListener("rightclick", (event) => {
- 
-  console.log("Right clicked")
   var lat = event.latLng.lat();
   var lng = event.latLng.lng();
   // Define broadcast circle
@@ -107,8 +105,6 @@ async function initMap() {
   content.appendChild(sendBtn);
   sendBtn.addEventListener("click", () => {
     var msg = prompt("Enter Emergency Broadcast Message:");
-    console.log(broadcastCircle.getCenter());
-    console.log(broadcastCircle.getRadius());
 
     // Get the form input DOM 
     document.getElementById("msg").value = msg;

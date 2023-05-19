@@ -189,7 +189,6 @@ app.post('/zones', upload.single('csv'), async (req, res) => {
 // Post msg payload
 
 app.post('/sendMsg', (req, res) => {
-  console.log(req.body);
   // Get the variables 
   const msg = req.body.msg;
   const lat = req.body.latitude;
