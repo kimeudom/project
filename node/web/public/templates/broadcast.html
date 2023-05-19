@@ -5,3 +5,13 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX-HF4LHmA6Nhgm2k-oUs3KueCL09MHa0&map_ids=2600f378d59f65e8&callback=initMap"></script>
   </div>
 </div>
+
+<div id="broadcast-form">
+  <form action="/sendMsg" method="post" id="broadcast">
+    <input type="text" name="msg" id="msg">
+    <input type="number" name="latitude" id="latitude" step="any">
+    <input type="number" name="longitude" id="longitude" step="any">
+    <input type="number" name="radius" id="radius" step="any">
+    <input type="submit" id="broadcast-submit-button">
+  </form>
+</div>
