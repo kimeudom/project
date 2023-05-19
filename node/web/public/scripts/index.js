@@ -273,38 +273,76 @@ function getRecords() {
       return res.json();
   }) 
     .then((records) => {
-      len = records.length
-      // creating the table
-      const table = document.createElement("table");
-      const thead = document.createElement("thread");
-      const tbody = document.createElement("tbody");
+      console.log(records)
+      let noOfRecords = records.length
 
+      // Initial display of records
+      displayRecords(0, 5, records);
 
-      // Creating the table header row
-      const headerRow = document.createElement("tr");
-      for (const key in records[0]){
-        const th = document.getElementById("th");
-        th.textContent = key;
-        headerRow.appendChild(th);
-      }
+      // Button click event handlers
+      const prevButton = document.getElementById("prev-button"); 
+      const nextButton = document.getElementById("next-button"); 
 
-      thead.appendChild(headerRow)
+      const recordsPerPage = 5;
+      let currentPage = 0;
 
-
-      // Table body
-      records.forEach(item => {
-        const row = document.getElementById("tr");
-        for (const key in item) {
-          const td = document.getElementById("td");
-          td.textContent = item[key];
-          row.appendChild(td);
+      prevButton.addEventListener("click", () => {
+        if (currentPage > 0) {
+          currentPage--;
+          const startIndex = currentPage * recordsPerPage;
+          const endIndex = startIndex - recordsPerPage;
+          displayRecords(startIndex, endIndex, records);
         }
-        tbody.appendChild(row);
       });
 
-      // Assembling the table
-      table.appendChild(thead);
-      table.appendChild(tbody);
-      tableContainer.appendChild(table);
+      nextButton.addEventListener("click", () => {
+        const totalRecords = records.length;
+        const totalPages = Math.ceil(totalRecords / recordsPerPage);
+        if (currentPage < totalPages - 1) {
+          const startIndex = currentPage * recordsPerPage;
+          const endIndex = startIndex + recordsPerPage;
+          displayRecords(startIndex, endIndex, records);
+        }
+      } )
+
     })
+}
+
+// Create rows from json objs
+function generateTableRows(records) {
+  let rows = `
+    <th>Date and Time</th>
+    <th>Broadcast Message</th>
+    <th>Radius</th>
+    <th>Visualize on Map</th>
+ `;
+  for (const record of records) {
+    const date = new Date(parseInt(record.id));
+
+    // Get individual components of the date and time
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1; // Month is zero-based, so adding 1
+    const day = date.getDate();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+    rows += `
+    <tr>
+      <td>${year}-${month}-${day} ${hours}:${minutes}:${seconds}</td>
+      <td>${record.msg}</td>
+      <td>${(record.radius / 1000).toFixed(3)} Km(s)</td>
+      <td><button class="btn">Visualize</button></td>
+    </tr>
+    `;
+  }
+
+  return rows;
+}
+
+// Display records in a table
+function displayRecords(start, end, data) {
+  const tableBody = document.getElementById("table");
+  const records = data.slice(start, end);
+
+  tableBody.innerHTML = generateTableRows(records);
 }
