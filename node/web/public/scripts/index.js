@@ -350,6 +350,9 @@ function displayRecords(start, end, data, msg) {
 function visualizeMap(lat, lng, radius, timestamp, msg) {
   var mainContent = document.getElementById("main-content");
  mainContent.innerHTML = `
+ <div>
+ <button class="btn" onclick="loadHtml('main-content', 'records.html'); getRecords()">Back</button>
+ </div>
   <div id="map">
   <script src="../scripts/map.js"></script>
     <script
