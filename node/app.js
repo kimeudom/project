@@ -276,27 +276,30 @@ app.get('/getCarriers', async (req, res) => {
 })
 
 app.get('/getRecords', async (req, res) => {
-  statement = `SELECT * FROM msgPayload`;
+  // Return records from most newest to oldest
+  statement = `SELECT * FROM msgPayload ORDER BY id DESC`;
   try {
     conn = await db.getConnection();
-    let finalJson = {};
     const rows = await conn.query(statement);
-    let rowCount = rows.length
-    console.log(rowCount)
-    for (let i = 0; i < rowCount; i++){
-      const bitValue = rows[i].id;
-      const bitString = bitValue.toString();
-      const jsonObj = {
-        id: bitString,
+    var noOfRows = rows.length;
+    var output = [];
+
+    // Getting the final output
+    for (var i = 0; i < noOfRows; i++){
+      var obj = rows[i];
+      var stringifiedVal = obj.id.toString();
+
+      var newObj = {
+        id: stringifiedVal,
         msg: rows[i].msg,
         lat: rows[i].lat,
         lng: rows[i].lng,
-        radius: rows[i].radius 
+        radius: rows[i].radius
+      };
+      output.push(newObj);
     }
-    console.log(jsonObj)
-      finalJson = Object.assign({}, finalJson, jsonObj);
-   }
-    res.status(200).json(finalJson);
+
+    res.status(200).json(output);
   } catch (err) {
     if (err) throw err;
   } finally {
