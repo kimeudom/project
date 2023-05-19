@@ -280,8 +280,24 @@ app.get('/getRecords', async (req, res) => {
   statement = `SELECT * FROM msgPayload`;
   try {
     conn = await db.getConnection();
+    let finalJson = {};
     const rows = await conn.query(statement);
-    res.status(200).json(rows);
+    let rowCount = rows.length
+    console.log(rowCount)
+    for (let i = 0; i < rowCount; i++){
+      const bitValue = rows[i].id;
+      const bitString = bitValue.toString();
+      const jsonObj = {
+        id: bitString,
+        msg: rows[i].msg,
+        lat: rows[i].lat,
+        lng: rows[i].lng,
+        radius: rows[i].radius 
+    }
+    console.log(jsonObj)
+      finalJson = Object.assign({}, finalJson, jsonObj);
+   }
+    res.status(200).json(finalJson);
   } catch (err) {
     if (err) throw err;
   } finally {

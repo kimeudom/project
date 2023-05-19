@@ -49,11 +49,15 @@ const addZone = (zoneID, zoneName, longitude, latitude, radius) => db.getConnect
 
 const sendMsg = (msg, lat, lng, radius) => db.getConnection().then((conn) => {
   timestmp = Date.now()
+  console.log(timestmp)
+  console.log(lat)
+  console.log(lng)
+  console.log(radius)
   statement = `INSERT INTO msgPayload(id, msg, lat, lng, radius) VALUES ("${timestmp}", "${msg}", "${lat}", "${lng}", "${radius}")`;
   conn.query(statement, (err, res) => {
     if (err) throw err;
   });
-  msgStatement = `INSERT INTO msg(id, clientID, categories) VALUES ("${timestmp}", "+254700005272", General Public)`;
+  msgStatement = `INSERT INTO msg(id, clientID, categories) VALUES ("${timestmp}", "+254700005272", "General Public")`;
   conn.query(msgStatement, (err, res) => {
     if (err) throw err;
   });
