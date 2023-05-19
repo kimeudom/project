@@ -351,6 +351,7 @@ function visualizeMap(lat, lng, radius, timestamp, msg) {
   var mainContent = document.getElementById("main-content");
  mainContent.innerHTML = `
  <div>
+ <div>
  <button class="btn" onclick="loadHtml('main-content', 'records.html'); getRecords()">Back</button>
  </div>
   <div id="map">
@@ -359,6 +360,7 @@ function visualizeMap(lat, lng, radius, timestamp, msg) {
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX-HF4LHmA6Nhgm2k-oUs3KueCL09MHa0&map_ids=2600f378d59f65e8&callback=visualize"></script>
  
   </div> 
+ </div>
   `;
   async function visualize() {
     let map;
