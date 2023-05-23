@@ -21,10 +21,10 @@ create table clients(
   tel VARCHAR(25)not null primary key,
   cellID int not null,
   baseID int not null,
-  lastConnectedCell int,
-  lastConnectedBase int,
   connectionStatus binary default 0,
   categories VARCHAR(100)
+  latitude decimal(25,19) not null,
+  longitude decimal(25,19) not null
 );
 
 /*Carriers Table*/
