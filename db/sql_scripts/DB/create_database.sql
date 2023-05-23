@@ -10,7 +10,8 @@ v=1.2
 /* Messages Table */
 DROP TABLE IF EXISTS msg;
 create table msg(
-  id BIGINT primary key,
+  id AUTO_INCREMENT PRIMARY KEY,
+  msgID BIGINT,
   clientID varchar(25) not null,
 );
 

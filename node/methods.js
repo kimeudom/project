@@ -1,6 +1,12 @@
 // Handles all post and get operations
 const db= require('./db_connect');
 
+// map methods
+const {
+  inBroadcastCircle,
+  inRange
+} = require('./map');
+
 ///////////////////////////////////////////////////////////////////////////////
 
 // Insert value in the clients table
@@ -47,7 +53,7 @@ const addZone = (zoneID, zoneName, longitude, latitude, radius) => db.getConnect
   });
 }); 
 
-const sendMsg = (msg, lat, lng, radius) => db.getConnection().then((conn) => {
+const sendMsg = (msg, lat, lng, radius) => db.getConnection().then(async (conn) => {
   timestmp = Date.now()
   statement = `INSERT INTO msgPayload(id, msg, lat, lng, radius) VALUES ("${timestmp}", "${msg}", "${lat}", "${lng}", "${radius}")`;
   conn.query(statement, (err, res) => {
@@ -55,10 +61,32 @@ const sendMsg = (msg, lat, lng, radius) => db.getConnection().then((conn) => {
   });
 
   // Broadcast to select clients
-  msgStatement = `INSERT INTO msg(id, clientID, categories) VALUES ("${timestmp}", "+254700005272", "General Public")`;
-  conn.query(msgStatement, (err, res) => {
-    if (err) throw err;
-  });
+  clientsStatement = "Select tel, cellID, latitude, longitude from clients";
+
+  // 
+  const clients = await conn.query(clientsStatement);
+  console.log(clients)
+  const noOfClients = clients.length
+
+  for (let i = 0; i < noOfClients; i++){
+    let clientCoords = {lat: parseFloat(clients[i].latitude), lng: parseFloat(clients[i].longitude)};
+    let BroadcastCircleCoords = {lat: lat, lng: lng};
+
+    if (inBroadcastCircle(clientCoords, BroadcastCircleCoords, radius)) {
+      // Get the cell coords
+      cellStatement = `SELECT latitude, longitude FROM cells WHERE id="${clients[i].cellID}"`;
+      const cell = await conn.query(cellStatement);
+      let cellCoords = { lat: cell[0].latitude, lng: cell[0].longitude };
+
+      if (inRange(clientCoords, cellCoords, 1000)) {
+        msgStatement = `INSERT INTO msg(msgID, clientID) VALUES ("${timestmp}", "${clients[i].tel}")`;
+
+        conn.query(msgStatement, (err, res) => {
+          if (err) throw err;
+        });
+      }
+    }
+  }
 });
 
 module.exports = {
@@ -69,4 +97,3 @@ module.exports = {
   addZone,
   sendMsg
 };
-
