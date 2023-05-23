@@ -370,7 +370,7 @@ function visualizeMap(lat, lng, radius, timestamp, msg) {
 
     // Center the map on the broadcast zone
     map = new Map(document.getElementById("map"), {
-      zoom: 11,
+      zoom: 08,
       center: { lat: lat, lng: lng },
       mapId: '2600f378d59f65e8'
     });
@@ -403,7 +403,7 @@ function visualizeMap(lat, lng, radius, timestamp, msg) {
     messageBox = `
     Timestamp: ${year}-${month}-${day} ${hours}:${minutes}:${seconds}<br>
     Message Payload: <b>${msg}</b><br>
-    Broadcast Range: <b>${(radius).toFixed(3)} Km(s)</b>`
+    Broadcast Range: <b>${(radius / 1000).toFixed(3)} Km(s)</b>`
 
     banner = new google.maps.InfoWindow({
       content: messageBox,
