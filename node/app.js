@@ -147,12 +147,12 @@ app.post('/client', (req, res) => {
   const tel = req.body.tel;
   const cell = req.body.cellID;
   const base = req.body.baseID;
-  const lastCell = req.body.lastCellID;
-  const lastBase = req.body.lastBaseID;
   const connStatus = req.body.connStatus;
   const category = req.body.cagegory;
+  const latitude = req.body.latitude;
+  const longitude = req.body.longitude;
   // Post to the database
-  addClient(tel, cell, base, lastCell, lastBase, connStatus, category);
+  addClient(tel, cell, base, connStatus, category, latitude, longitude);
   // Redirect to home
   res.redirect('/');
 

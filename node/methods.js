@@ -27,11 +27,11 @@ const addCell = (id, baseID, longitude, latitude, maxConnected) => db.getConnect
   });
 });
 
-const addClient = (tel, cellID, baseID, lastConnectedCell, lastConnectedBase, status, categories) => db.getConnection().then(function (conn) {
+const addClient = (tel, cellID, baseID, status, categories, latitude, longitude) => db.getConnection().then(function (conn) {
   if (status ===  "on") {
     status = 1;
   }
-  statement = `INSERT INTO clients(tel, cellID, baseID, lastConnectedCell, lastConnectedBase, connectionStatus, categoriee) VALUES("${tel}","${cellID}","${baseID}","${lastConnectedCell}","${lastConnectedBase}","${status}", "${categories}" )`;
+  statement = `INSERT INTO clients(tel, cellID, baseID, connectionStatus, categories, latitude, longitude) VALUES("${tel}","${cellID}","${baseID}","${status}", "${categories}", "${latitude}" , "${longitude}" )`;
   conn.query(statement, function (err, result) {
     if (err) throw err;
   });
@@ -53,6 +53,8 @@ const sendMsg = (msg, lat, lng, radius) => db.getConnection().then((conn) => {
   conn.query(statement, (err, res) => {
     if (err) throw err;
   });
+
+  // Broadcast to select clients
   msgStatement = `INSERT INTO msg(id, clientID, categories) VALUES ("${timestmp}", "+254700005272", "General Public")`;
   conn.query(msgStatement, (err, res) => {
     if (err) throw err;

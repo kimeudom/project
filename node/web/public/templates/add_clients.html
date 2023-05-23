@@ -15,20 +15,21 @@
         <input type="number" name="baseID" id="baseID">
       </div>
       <div class="input">
-        <label for="lastCellID">Last Cell ID</label>
-        <input type="number" name="lastCellID" id="lastCellID">
-      </div>
-      <div class="input">
-        <label for="baseID">Last Base ID</label>
-        <input type="number" name="lastBaseID" id="lastBaseID">
-      </div>
-      <div class="input">
         <label for="connStatus">Connection Status</label>
         <input type="radio" name="connStatus" id="connStatus">
       </div>
       <div class="input">
         <label for="category">Client Category</label>
         <input type="text" name="category" id="category">
+      </div>
+      <div class="input">
+        <label for="latitude">Latitude</label>
+        <input type="number" name="latitude" id="latitude" step="any" max="90" min="-90" placeholder="-90>= lat >=90">
+      </div>
+      <div class="input">
+        <label for="longitude">Longitude</label>
+        <input type="number" name="longitude" id="longitude" step="any" max="180" min="-180"
+          placeholder="-180>= lng >=180">
       </div>
 
 

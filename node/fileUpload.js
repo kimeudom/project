@@ -29,7 +29,7 @@ const addCells = (csv) => db.getConnection().then((conn) => {
 });
 
 const addClients = (csv) => db.getConnection().then((conn) => {
-  statement = `LOAD DATA INFILE "${csv}" INTO TABLE clients FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 ROWS(tel, cellID, baseID, lastConnectedCell, lastConnectedBase, connectionStatus, categories)`;
+  statement = `LOAD DATA INFILE "${csv}" INTO TABLE clients FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 ROWS(tel, cellID, baseID, connectionStatus, categories, latitude, longitude)`;
   conn.query(statement, (err, res) => {
     if (err) throw err;
   })
