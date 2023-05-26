@@ -307,10 +307,10 @@ app.get('/getRecords', async (req, res) => {
   }
 })
 
+// Returns the broadcast data
 app.get('/getMsgs/:tel', async (req, res) => {
   let tel = req.params.tel;
-  console.log(tel)
-  statement = `SELECT mp.msg FROM msgPayload AS mp LEFT JOIN msg AS m ON mp.id = m.msgID WHERE m.clientid = ${tel}`;
+  statement = `SELECT mp.msg FROM msgPayload AS mp LEFT JOIN msg AS m ON mp.id = m.msgID WHERE m.clientid = ${tel} ORDER BY m.id DESC`;
   try {
     conn = await db.getConnection();
     const rows = await conn.query(statement);
