@@ -13,7 +13,7 @@ import kotlin.concurrent.timerTask
 class MainActivity : AppCompatActivity() {
 
     private val baseUrl = "http://192.168.1.50:55555/getMsgs/+254700005272"
-    private val refreshInterval: Long = 5000 // Refresh interval in milliseconds (e.g., 5000ms = 5 seconds)
+    private val refreshInterval: Long = 1000 // Refresh interval in milliseconds (e.g., 5000ms = 5 seconds)
     private val msgIdSet = mutableSetOf<String>()
 
     private lateinit var textView: TextView
