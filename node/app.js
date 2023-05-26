@@ -275,8 +275,8 @@ app.get('/getCarriers', async (req, res) => {
   }
 })
 
+// Return records from most newest to oldest
 app.get('/getRecords', async (req, res) => {
-  // Return records from most newest to oldest
   statement = `SELECT * FROM msgPayload ORDER BY id DESC`;
   try {
     conn = await db.getConnection();
@@ -305,5 +305,21 @@ app.get('/getRecords', async (req, res) => {
   } finally {
     if (conn) conn.release();
   }
+})
+
+app.get('/getMsgs/:tel', async (req, res) => {
+  let tel = req.params.tel;
+  console.log(tel)
+  statement = `SELECT mp.msg FROM msgPayload AS mp LEFT JOIN msg AS m ON mp.id = m.msgID WHERE m.clientid = ${tel}`;
+  try {
+    conn = await db.getConnection();
+    const rows = await conn.query(statement);
+    res.status(200).json(rows);
+  } catch (err) {
+    if (err) throw err;
+  } finally{
+    if (conn) conn.release();
+  }
+
 })
 
