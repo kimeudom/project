@@ -6,6 +6,9 @@ const csv = require('fast-csv');
 // Db requirements
 const db= require('./db_connect');
 
+// Pdf requirements
+const PDFdocument = require('pdfkit');
+
 // app requirements
 const express = require('express');
 const app = express();
@@ -323,3 +326,88 @@ app.get('/getMsgs/:tel', async (req, res) => {
 
 })
 
+async function getRecords() {
+  statement = `SELECT * FROM msgPayload ORDER BY id DESC`;
+  try {
+    conn = await db.getConnection();
+    const rows = await conn.query(statement);
+    var noOfRows = rows.length;
+    var output = [];
+
+    // Getting the final output
+    for (var i = 0; i < noOfRows; i++){
+      var obj = rows[i];
+      var stringifiedVal = obj.id.toString();
+
+      var newObj = {
+        id: stringifiedVal,
+        msg: rows[i].msg,
+        lat: rows[i].lat,
+        lng: rows[i].lng,
+        radius: rows[i].radius
+      };
+      output.push(newObj);
+    }
+
+    return output;
+  } catch (err) {
+    if (err) throw err;
+  } finally {
+    if (conn) conn.release();
+  }
+}
+
+app.get("/transactionalReport", async (req, res) => {
+  statement = `SELECT * FROM msgPayload ORDER BY id DESC`;
+  try {
+    conn = await db.getConnection();
+    const rows = await conn.query(statement);
+    var noOfRows = rows.length;
+    var results = [];
+
+    // Getting the final output
+    for (var i = 0; i < noOfRows; i++) {
+      var obj = rows[i];
+      var stringifiedVal = obj.id.toString();
+    // Get individual components of the date and time
+      var timestamp = new Date(parseInt(obj.id));
+      var time = timestamp.toLocaleTimeString();
+      var date = timestamp.toLocaleDateString();
+      var rad = (rows[i].radius / 1000).toFixed(2);
+      var newObj = {
+        id: `${date} ${time}`,
+        msg: rows[i].msg,
+        // lat: rows[i].lat,
+        // lng: rows[i].lng,
+        radius: rad 
+      };
+      results.push(newObj);
+    }
+    // Preparing the document
+    const doc = new PDFdocument();
+    doc.pipe(res);
+
+    // Set up table headers
+      const headers = ['id', 'Message', "Radius"]; // Replace with your actual column names
+      doc.font('Helvetica-Bold').fontSize(12);
+      headers.forEach((header, index) => {
+        doc.text(header, 50 + index * 70, 50);
+      });
+
+      // Add data rows to the table
+      doc.font('Helvetica').fontSize(10);
+      results.forEach((row, rowIndex) => {
+        Object.values(row).forEach((columnValue, columnIndex) => {
+          doc.text(columnValue.toString(), 50 + columnIndex * 140, 70 + (rowIndex + 1) * 20);
+        });
+      });
+
+      // Finalize the PDF and send it as the response
+      doc.end();
+
+  } catch (err) {
+    if (err) throw err;
+  } finally {
+    if (conn) conn.release();
+  }
+  })

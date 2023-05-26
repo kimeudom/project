@@ -273,7 +273,6 @@ function getRecords() {
       return res.json();
   }) 
     .then((records) => {
-      console.log(records)
       let noOfRecords = records.length
 
       // Initial display of records
@@ -285,6 +284,7 @@ function getRecords() {
 
       const recordsPerPage = 5;
       let currentPage = 0;
+      const totalPages = Math.ceil(noOfRecords / recordsPerPage);
 
       prevButton.addEventListener("click", () => {
         if (currentPage > 0) {
@@ -420,3 +420,29 @@ function visualizeMap(lat, lng, radius, timestamp, msg) {
   visualize();
 }
 
+function getTransactions() {
+  // Open a new tab
+  const newTab = window.open('', '_blank');
+
+  // Send a GET request to the server endpoint
+  fetch('/transactionalReport')
+    .then(response => {
+      if (response.ok) {
+        // Return the response as a blob
+        return response.blob();
+      } else {
+        throw new Error('Error generating PDF');
+      }
+    })
+    .then(blob => {
+      // Create a URL object from the blob
+      const url = URL.createObjectURL(blob);
+
+      // Set the URL as the source of the new tab
+      newTab.location.href = url;
+    })
+    .catch(error => {
+      console.error('Error: ', error);
+      newTab.close(); // Close the new tab in case of an error
+    });
+}
