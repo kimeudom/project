@@ -1,9 +1,10 @@
+package com.smsCB.com
+
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.smsCB.com.R
 import org.json.JSONArray
 import java.net.HttpURLConnection
 import java.net.URL
@@ -13,7 +14,7 @@ import kotlin.concurrent.timerTask
 class MainActivity : AppCompatActivity() {
 
     private val baseUrl = "http://192.168.1.50:55555/getMsgs/+254700005272"
-    private val refreshInterval: Long = 1000 // Refresh interval in milliseconds (e.g., 5000ms = 5 seconds)
+    private val refreshInterval: Long = 5000 // Refresh interval in milliseconds (e.g., 5000ms = 5 seconds)
     private val msgIdSet = mutableSetOf<String>()
 
     private lateinit var textView: TextView
