@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg
+PUBLIC "-//W3C//DTD SVG 1.1//EN"
+       "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="80 13 936 564" width="856px" height="551px" xmlns="http://www.w3.org/2000/svg" version="1.1">
+   <line x1="624" y1="479" x2="634" y2="479" style="stroke:#c00;stroke-width:1;"/>
+   <line x1="813" y1="446" x2="823" y2="446" style="stroke:#c00;stroke-width:1;"/>
+   <line x1="634" y1="479" x2="813" y2="446" style="stroke:#c00;stroke-width:1;"/>
+   <line x1="631.5" y1="479" x2="627.96446609407" y2="482.53553390593" style="stroke:#c00;stroke-width:2;"/>
+   <line x1="631.5" y1="479" x2="627.96446609407" y2="475.46446609407" style="stroke:#c00;stroke-width:2;"/>
+   <line x1="818" y1="446" x2="814.46446609407" y2="449.53553390593" style="stroke:#c00;stroke-width:2;"/>
+   <line x1="818" y1="446" x2="814.46446609407" y2="442.46446609407" style="stroke:#c00;stroke-width:2;"/>
+   <line x1="766" y1="99" x2="756" y2="99" style="stroke:#b0b;stroke-width:1;"/>
+   <line x1="634" y1="459" x2="624" y2="459" style="stroke:#b0b;stroke-width:1;"/>
+   <line x1="756" y1="99" x2="634" y2="459" style="stroke:#b0b;stroke-width:1;"/>
+   <line x1="758.5" y1="99" x2="762.03553390593" y2="102.53553390593" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="758.5" y1="99" x2="762.03553390593" y2="95.464466094067" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="629" y1="459" x2="632.53553390593" y2="462.53553390593" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="629" y1="459" x2="632.53553390593" y2="455.46446609407" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="553" y1="115" x2="563" y2="115" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="496" y1="459" x2="506" y2="459" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="563" y1="115" x2="496" y2="459" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="560.5" y1="115" x2="556.96446609407" y2="118.53553390593" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="560.5" y1="115" x2="556.96446609407" y2="111.46446609407" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="501" y1="459" x2="497.46446609407" y2="462.53553390593" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="501" y1="459" x2="497.46446609407" y2="455.46446609407" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="553" y1="95" x2="563" y2="95" style="stroke:#333;stroke-width:1;"/>
+   <line x1="756" y1="79" x2="766" y2="79" style="stroke:#333;stroke-width:1;"/>
+   <line x1="563" y1="95" x2="756" y2="79" style="stroke:#333;stroke-width:1;"/>
+   <line x1="560.5" y1="95" x2="556.96446609407" y2="98.535533905933" style="stroke:#333;stroke-width:2;"/>
+   <line x1="560.5" y1="95" x2="556.96446609407" y2="91.464466094067" style="stroke:#333;stroke-width:2;"/>
+   <line x1="761" y1="79" x2="757.46446609407" y2="82.535533905933" style="stroke:#333;stroke-width:2;"/>
+   <line x1="761" y1="79" x2="757.46446609407" y2="75.464466094067" style="stroke:#333;stroke-width:2;"/>
+   <line x1="179" y1="241" x2="189" y2="241" style="stroke:#b0b;stroke-width:1;"/>
+   <line x1="410" y1="75" x2="420" y2="75" style="stroke:#b0b;stroke-width:1;"/>
+   <line x1="189" y1="241" x2="410" y2="75" style="stroke:#b0b;stroke-width:1;"/>
+   <line x1="186.5" y1="241" x2="182.96446609407" y2="244.53553390593" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="186.5" y1="241" x2="182.96446609407" y2="237.46446609407" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="415" y1="75" x2="411.46446609407" y2="78.535533905933" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="415" y1="75" x2="411.46446609407" y2="71.464466094067" style="stroke:#b0b;stroke-width:2;"/>
+   <rect width="118" height="20" x="506" y="429" style="fill:#007;stroke:black;"/>
+   <text width="118" height="20" x="511" y="443" style="fill:#fff;" font-family="Arial" font-size="16px"> bstations</text>
+   <rect width="118" height="20" x="506" y="449" style="fill:#aea;stroke:black;"/>
+   <text width="118" height="20" x="511" y="463" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="118" height="20" x="506" y="469" style="fill:none;stroke:black;"/>
+   <text width="118" height="20" x="511" y="483" style="fill:black;" font-family="Arial" font-size="16px">carrierID</text>
+   <rect width="118" height="20" x="506" y="489" style="fill:none;stroke:black;"/>
+   <text width="118" height="20" x="511" y="503" style="fill:black;" font-family="Arial" font-size="16px">latitude</text>
+   <rect width="118" height="20" x="506" y="509" style="fill:none;stroke:black;"/>
+   <text width="118" height="20" x="511" y="523" style="fill:black;" font-family="Arial" font-size="16px">longitude</text>
+   <rect width="118" height="20" x="506" y="529" style="fill:none;stroke:black;"/>
+   <text width="118" height="20" x="511" y="543" style="fill:black;" font-family="Arial" font-size="16px">maxConnected</text>
+   <rect width="98" height="20" x="823" y="416" style="fill:#007;stroke:black;"/>
+   <text width="98" height="20" x="828" y="430" style="fill:#fff;" font-family="Arial" font-size="16px"> carriers</text>
+   <rect width="98" height="20" x="823" y="436" style="fill:#aea;stroke:black;"/>
+   <text width="98" height="20" x="828" y="450" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="98" height="20" x="823" y="456" style="fill:none;stroke:black;"/>
+   <text width="98" height="20" x="828" y="470" style="fill:black;" font-family="Arial" font-size="16px">carrierName</text>
+   <rect width="118" height="20" x="766" y="49" style="fill:#007;stroke:black;"/>
+   <text width="118" height="20" x="771" y="63" style="fill:#fff;" font-family="Arial" font-size="16px"> cells</text>
+   <rect width="118" height="20" x="766" y="69" style="fill:#aea;stroke:black;"/>
+   <text width="118" height="20" x="771" y="83" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="118" height="20" x="766" y="89" style="fill:none;stroke:black;"/>
+   <text width="118" height="20" x="771" y="103" style="fill:black;" font-family="Arial" font-size="16px">baseID</text>
+   <rect width="118" height="20" x="766" y="109" style="fill:none;stroke:black;"/>
+   <text width="118" height="20" x="771" y="123" style="fill:black;" font-family="Arial" font-size="16px">latitude</text>
+   <rect width="118" height="20" x="766" y="129" style="fill:none;stroke:black;"/>
+   <text width="118" height="20" x="771" y="143" style="fill:black;" font-family="Arial" font-size="16px">longitude</text>
+   <rect width="118" height="20" x="766" y="149" style="fill:none;stroke:black;"/>
+   <text width="118" height="20" x="771" y="163" style="fill:black;" font-family="Arial" font-size="16px">maxConnected</text>
+   <rect width="133" height="20" x="420" y="45" style="fill:#007;stroke:black;"/>
+   <text width="133" height="20" x="425" y="59" style="fill:#fff;" font-family="Arial" font-size="16px"> clients</text>
+   <rect width="133" height="20" x="420" y="65" style="fill:none;stroke:black;"/>
+   <text width="133" height="20" x="425" y="79" style="fill:black;" font-family="Arial" font-size="16px">tel</text>
+   <rect width="133" height="20" x="420" y="85" style="fill:none;stroke:black;"/>
+   <text width="133" height="20" x="425" y="99" style="fill:black;" font-family="Arial" font-size="16px">cellID</text>
+   <rect width="133" height="20" x="420" y="105" style="fill:none;stroke:black;"/>
+   <text width="133" height="20" x="425" y="119" style="fill:black;" font-family="Arial" font-size="16px">baseID</text>
+   <rect width="133" height="20" x="420" y="125" style="fill:none;stroke:black;"/>
+   <text width="133" height="20" x="425" y="139" style="fill:black;" font-family="Arial" font-size="16px">connectionStatus</text>
+   <rect width="133" height="20" x="420" y="145" style="fill:none;stroke:black;"/>
+   <text width="133" height="20" x="425" y="159" style="fill:black;" font-family="Arial" font-size="16px">categories</text>
+   <rect width="133" height="20" x="420" y="165" style="fill:none;stroke:black;"/>
+   <text width="133" height="20" x="425" y="179" style="fill:black;" font-family="Arial" font-size="16px">latitude</text>
+   <rect width="133" height="20" x="420" y="185" style="fill:none;stroke:black;"/>
+   <text width="133" height="20" x="425" y="199" style="fill:black;" font-family="Arial" font-size="16px">longitude</text>
+   <rect width="113" height="20" x="403" y="273" style="fill:#007;stroke:black;"/>
+   <text width="113" height="20" x="408" y="287" style="fill:#fff;" font-family="Arial" font-size="16px"> filters</text>
+   <rect width="113" height="20" x="403" y="293" style="fill:#aea;stroke:black;"/>
+   <text width="113" height="20" x="408" y="307" style="fill:black;" font-family="Arial" font-size="16px">filterID</text>
+   <rect width="113" height="20" x="403" y="313" style="fill:none;stroke:black;"/>
+   <text width="113" height="20" x="408" y="327" style="fill:black;" font-family="Arial" font-size="16px">filterName</text>
+   <rect width="113" height="20" x="403" y="333" style="fill:none;stroke:black;"/>
+   <text width="113" height="20" x="408" y="347" style="fill:black;" font-family="Arial" font-size="16px">clientCategory</text>
+   <rect width="84" height="20" x="95" y="211" style="fill:#007;stroke:black;"/>
+   <text width="84" height="20" x="100" y="225" style="fill:#fff;" font-family="Arial" font-size="16px"> msg</text>
+   <rect width="84" height="20" x="95" y="231" style="fill:none;stroke:black;"/>
+   <text width="84" height="20" x="100" y="245" style="fill:black;" font-family="Arial" font-size="16px">clientID</text>
+   <rect width="84" height="20" x="95" y="251" style="fill:none;stroke:black;"/>
+   <text width="84" height="20" x="100" y="265" style="fill:black;" font-family="Arial" font-size="16px">categories</text>
+   <rect width="84" height="20" x="95" y="271" style="fill:none;stroke:black;"/>
+   <text width="84" height="20" x="100" y="285" style="fill:black;" font-family="Arial" font-size="16px">msgID</text>
+   <rect width="84" height="20" x="95" y="291" style="fill:#aea;stroke:black;"/>
+   <text width="84" height="20" x="100" y="305" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="95" height="20" x="110" y="377" style="fill:#007;stroke:black;"/>
+   <text width="95" height="20" x="115" y="391" style="fill:#fff;" font-family="Arial" font-size="16px"> msgPayload</text>
+   <rect width="95" height="20" x="110" y="397" style="fill:#aea;stroke:black;"/>
+   <text width="95" height="20" x="115" y="411" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="95" height="20" x="110" y="417" style="fill:none;stroke:black;"/>
+   <text width="95" height="20" x="115" y="431" style="fill:black;" font-family="Arial" font-size="16px">msg</text>
+   <rect width="95" height="20" x="110" y="437" style="fill:none;stroke:black;"/>
+   <text width="95" height="20" x="115" y="451" style="fill:black;" font-family="Arial" font-size="16px">lat</text>
+   <rect width="95" height="20" x="110" y="457" style="fill:none;stroke:black;"/>
+   <text width="95" height="20" x="115" y="471" style="fill:black;" font-family="Arial" font-size="16px">lng</text>
+   <rect width="95" height="20" x="110" y="477" style="fill:none;stroke:black;"/>
+   <text width="95" height="20" x="115" y="491" style="fill:black;" font-family="Arial" font-size="16px">radius</text>
+   <rect width="87" height="20" x="153" y="28" style="fill:#007;stroke:black;"/>
+   <text width="87" height="20" x="158" y="42" style="fill:#fff;" font-family="Arial" font-size="16px"> zones</text>
+   <rect width="87" height="20" x="153" y="48" style="fill:#aea;stroke:black;"/>
+   <text width="87" height="20" x="158" y="62" style="fill:black;" font-family="Arial" font-size="16px">zoneID</text>
+   <rect width="87" height="20" x="153" y="68" style="fill:none;stroke:black;"/>
+   <text width="87" height="20" x="158" y="82" style="fill:black;" font-family="Arial" font-size="16px">zoneName</text>
+   <rect width="87" height="20" x="153" y="88" style="fill:none;stroke:black;"/>
+   <text width="87" height="20" x="158" y="102" style="fill:black;" font-family="Arial" font-size="16px">latitude</text>
+   <rect width="87" height="20" x="153" y="108" style="fill:none;stroke:black;"/>
+   <text width="87" height="20" x="158" y="122" style="fill:black;" font-family="Arial" font-size="16px">longitude</text>
+   <rect width="87" height="20" x="153" y="128" style="fill:none;stroke:black;"/>
+   <text width="87" height="20" x="158" y="142" style="fill:black;" font-family="Arial" font-size="16px">radius</text>
+</svg>
