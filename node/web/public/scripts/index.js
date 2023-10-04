@@ -1,3 +1,7 @@
+// Client data global
+clients = [];
+
+
 // Loads html content into a div element into a div
 // Defined by id and from a file defined by filename
 function loadHtml(id, filename) {
@@ -68,7 +72,7 @@ async function initMap() {
   // Request needed libraries.
   //@ts-ignore
   const { Map } = await google.maps.importLibrary("maps");
-  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+  const { AdvancedMarkerElement } = await new google.maps.importLibrary("marker");
 
   // Centering the map on nairobi
   map = new Map(document.getElementById("map"), {
@@ -117,7 +121,6 @@ async function initMap() {
 
   // Show tbe bases and cells
   //showBases()
-  showCells()
 
   // Defines the broadcast Circle
 
@@ -159,8 +162,10 @@ async function initMap() {
       console.log("Error: ", err);
     });
   }
+  showCells(map, AdvancedMarkerElement);
+}
 
-  function showCells() {
+  function showCells(map, AdvancedMarkerElement) {
     
   fetch('http://localhost:55555/getAllCells')
     .then((res) => {
@@ -172,13 +177,6 @@ async function initMap() {
     .then((cells) => {
       len = cells.length
       for (let i = 0; i < len; i++) {
-        const cell = new AdvancedMarkerElement({
-          map: map,
-          position: { lat: parseFloat(cells[i].latitude), lng: parseFloat(cells[i].longitude) },
-          title: "Zone Center",
-          draggable: false,
-        });
-
         const cellCircle = new google.maps.Circle({
           strokeColor: "#FF0000",
           strokeOpacity: 0.8,
@@ -192,6 +190,34 @@ async function initMap() {
       }
     });
   }
+
+
+
+function getClients(map, AdvancedMarkerElement) {
+    // Fetch clients
+    fetch('http://localhost:55555/getAllClients')
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Error retreiving clients");
+        }
+        return res.json();
+      })
+      .then((clients) => {
+        len = clients.length
+        for (let i = 0; i < len; i++){
+          const clientCircle = new google.maps.Circle({
+          strokeColor: "0000FF",
+          strokeOpacity: 0.9,
+          strokeWeight: 2,
+          fillColor: "0000FF",
+          fillOpacity: 0.9,
+          map: map,
+          center: { lat: parseFloat(clients[i].latitude), lng: parseFloat(clients[i].longitude) },
+          radius: 100
+ 
+          })
+        }
+    })
 }
 
 // Reloads the  map in the map div
@@ -276,7 +302,7 @@ function getRecords() {
       let noOfRecords = records.length
 
       // Initial display of records
-      displayRecords(0, 5, records);
+      displayRecords(6, 10, records);
 
       // Button click event handlers
       const prevButton = document.getElementById("prev-button"); 
@@ -357,7 +383,7 @@ function visualizeMap(lat, lng, radius, timestamp, msg) {
   <div id="map">
   <script src="../scripts/map.js"></script>
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX-HF4LHmA6Nhgm2k-oUs3KueCL09MHa0&map_ids=2600f378d59f65e8&callback=visualize"></script>
+      src="https://maps.googleapis.com/maps/api/js?key=[API KEY HERE]&map_ids=[MAP ID HERE]8&callback=visualize"></script>
  
   </div> 
  </div>

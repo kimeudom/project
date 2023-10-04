@@ -234,6 +234,21 @@ app.get('/getAllBases/', async (req, res) => {
   }
 })
 
+app.get('getAllClients', async (req, res) => {
+  statement = `SELECT latitude, longitude FROM clients`;
+  try {
+    conn = await db.getConnection();
+    const rows = await conn.query(statement);
+    res.status(200).json(rows)
+  }
+  catch (err) {
+    if (err) throw err;
+  }
+  finally {
+    if (conn) conn.release();
+  }
+})
+
 
 app.get('/getCells/:baseID', async (req, res) => {
   const baseID = req.params.baseID;
@@ -379,7 +394,7 @@ app.get("/transactionalReport", async (req, res) => {
         msg: rows[i].msg,
         // lat: rows[i].lat,
         // lng: rows[i].lng,
-        radius: rad 
+        //radius: rad 
       };
       results.push(newObj);
     }
@@ -388,7 +403,7 @@ app.get("/transactionalReport", async (req, res) => {
     doc.pipe(res);
 
     // Set up table headers
-      const headers = ['id', 'Message', "Radius"]; // Replace with your actual column names
+      const headers = ['Timestamp', '           Message']; 
       doc.font('Helvetica-Bold').fontSize(12);
       headers.forEach((header, index) => {
         doc.text(header, 50 + index * 70, 50);
@@ -398,7 +413,7 @@ app.get("/transactionalReport", async (req, res) => {
       doc.font('Helvetica').fontSize(10);
       results.forEach((row, rowIndex) => {
         Object.values(row).forEach((columnValue, columnIndex) => {
-          doc.text(columnValue.toString(), 50 + columnIndex * 140, 70 + (rowIndex + 1) * 20);
+          doc.text(columnValue.toString(), 55 + columnIndex * 140, 70 + (rowIndex + 1) * 20);
         });
       });
 
